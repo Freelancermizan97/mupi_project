@@ -14,7 +14,7 @@ class _HomePageState extends State<HomePage> {
   final List<String> items1 = ['CMT', 'ENT', 'EEE', 'Civil', 'MC'];
   String? selectedItem1 = 'CMT';
 
-  final List<String> items1 = ['CMT', 'ENT', 'EEE', 'Civil', 'MC'];/////
+  final List<String> items1 = ['CMT', 'ENT', 'EEE', 'Civil', 'MC'];
   String? selectedItem1 = 'CMT';
 
   final List<String> items2 = ['CMT', 'ENT', 'EEE', 'Civil', 'MC'];
