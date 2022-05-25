@@ -19,6 +19,7 @@ class _HomePageState extends State<HomePage> {
   final List<String> items2 = [ '1st Shift', '2nd Shift'];
   String? selectedItem2 = '1st Shift';
 
+  //late final double? menuMaxHeight;
 
   
   Color primaryColor = Color(0xff00BFA6);
@@ -342,7 +343,7 @@ class _HomePageState extends State<HomePage> {
                                         Container(
                                           padding: EdgeInsets.only(left: 5),
                                           height: size.height*0.030,
-                                          width: size.width*0.22,
+                                          width: size.width*0.21,
                                           decoration: BoxDecoration(
                                               borderRadius: BorderRadius.circular(10),
                                               color: Color(0xffFFFFFF),
@@ -353,7 +354,8 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                           child: DropdownButtonHideUnderline(
                                             child: DropdownButton<String>(
-                                                iconSize: 5,
+                                              menuMaxHeight: 200,
+                                                iconSize: 15,
                                                 value: selectedItem1,
                                                 items: items1.map((item) => DropdownMenuItem<String>(
                                                   value: item,
@@ -389,7 +391,8 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                           child: DropdownButtonHideUnderline(
                                             child: DropdownButton<String>(
-
+                                                menuMaxHeight: 200,
+                                                iconSize: 15,
                                                 value: selectedItem2,
                                                 items: items2.map((item) => DropdownMenuItem(
                                                   value: item,
@@ -510,7 +513,7 @@ class _HomePageState extends State<HomePage> {
                                         Container(
                                           padding: EdgeInsets.only(left: 5),
                                           height: size.height*0.030,
-                                          width: size.width*0.22,
+                                          width: size.width*0.21,
                                           decoration: BoxDecoration(
                                               borderRadius: BorderRadius.circular(10),
                                               color: Color(0xffFFFFFF),
@@ -521,10 +524,10 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                           child: DropdownButtonHideUnderline(
                                             child: DropdownButton<String>(
-
+                                                menuMaxHeight: 200,
+                                                iconSize: 15,
                                                 value: selectedItem1,
                                                 items: items1.map((item) => DropdownMenuItem<String>(
-
                                                   value: item,
                                                   child: Row(
                                                     children: [
@@ -558,7 +561,8 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                           child: DropdownButtonHideUnderline(
                                             child: DropdownButton<String>(
-
+                                                menuMaxHeight: 200,
+                                                iconSize: 15,
                                                 value: selectedItem2,
                                                 items: items2.map((item) => DropdownMenuItem(
                                                   value: item,
@@ -679,7 +683,7 @@ class _HomePageState extends State<HomePage> {
                                         Container(
                                           padding: EdgeInsets.only(left: 5),
                                           height: size.height*0.030,
-                                          width: size.width*0.22,
+                                          width: size.width*0.21,
                                           decoration: BoxDecoration(
                                               borderRadius: BorderRadius.circular(10),
                                               color: Color(0xffFFFFFF),
@@ -690,10 +694,10 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                           child: DropdownButtonHideUnderline(
                                             child: DropdownButton<String>(
-
+                                                menuMaxHeight: 200,
+                                                iconSize: 15,
                                                 value: selectedItem1,
                                                 items: items1.map((item) => DropdownMenuItem<String>(
-
                                                   value: item,
                                                   child: Row(
                                                     children: [
@@ -727,7 +731,8 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                           child: DropdownButtonHideUnderline(
                                             child: DropdownButton<String>(
-
+                                                menuMaxHeight: 200,
+                                                iconSize: 15,
                                                 value: selectedItem2,
                                                 items: items2.map((item) => DropdownMenuItem(
                                                   value: item,
@@ -848,7 +853,7 @@ class _HomePageState extends State<HomePage> {
                                         Container(
                                           padding: EdgeInsets.only(left: 5),
                                           height: size.height*0.030,
-                                          width: size.width*0.22,
+                                          width: size.width*0.21,
                                           decoration: BoxDecoration(
                                               borderRadius: BorderRadius.circular(10),
                                               color: Color(0xffFFFFFF),
@@ -859,10 +864,10 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                           child: DropdownButtonHideUnderline(
                                             child: DropdownButton<String>(
-
+                                                menuMaxHeight: 200,
+                                                iconSize: 15,
                                                 value: selectedItem1,
                                                 items: items1.map((item) => DropdownMenuItem<String>(
-
                                                   value: item,
                                                   child: Row(
                                                     children: [
@@ -896,7 +901,8 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                           child: DropdownButtonHideUnderline(
                                             child: DropdownButton<String>(
-
+                                                menuMaxHeight: 200,
+                                                iconSize: 15,
                                                 value: selectedItem2,
                                                 items: items2.map((item) => DropdownMenuItem(
                                                   value: item,
@@ -1017,7 +1023,7 @@ class _HomePageState extends State<HomePage> {
                                         Container(
                                           padding: EdgeInsets.only(left: 5),
                                           height: size.height*0.030,
-                                          width: size.width*0.22,
+                                          width: size.width*0.21,
                                           decoration: BoxDecoration(
                                               borderRadius: BorderRadius.circular(10),
                                               color: Color(0xffFFFFFF),
@@ -1028,10 +1034,10 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                           child: DropdownButtonHideUnderline(
                                             child: DropdownButton<String>(
-
+                                                menuMaxHeight: 200,
+                                                iconSize: 15,
                                                 value: selectedItem1,
                                                 items: items1.map((item) => DropdownMenuItem<String>(
-
                                                   value: item,
                                                   child: Row(
                                                     children: [
@@ -1065,7 +1071,8 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                           child: DropdownButtonHideUnderline(
                                             child: DropdownButton<String>(
-
+                                                menuMaxHeight: 200,
+                                                iconSize: 15,
                                                 value: selectedItem2,
                                                 items: items2.map((item) => DropdownMenuItem(
                                                   value: item,
@@ -1403,6 +1410,7 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                           child: DropdownButtonHideUnderline(
                                             child: DropdownButton<String>(
+                                                menuMaxHeight: 200,
                                                 iconSize: 3,
                                                 value: selectedItem1,
                                                 items: items1.map((item) => DropdownMenuItem<String>(
@@ -1437,168 +1445,7 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                           child: DropdownButtonHideUnderline(
                                             child: DropdownButton<String>(
-                                              iconSize: 2,
-                                                value: selectedItem2,
-                                                items: items2.map((item) => DropdownMenuItem(
-                                                  value: item,
-                                                  child: Row(
-                                                    children: [
-                                                      //Image(image: AssetImage('images/icon12.png'),height: 15, width: 15,),
-                                                      //SizedBox(width: size.width*0.01,),
-                                                      Text(item, style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold,fontFamily: 'Nun', color: Color(0xff494A4B)),)
-                                                    ],
-                                                  ),
-
-                                                ) )
-                                                    .toList(),
-                                                onChanged: (item) => setState(() => selectedItem2 = item,)
-                                            ),
-                                          ),
-                                        ),
-
-
-                                      ],
-                                    )
-                                  ],
-                                )
-
-                              ],
-                            ),
-                            SizedBox(height: size.height*0.02,),
-                            Text('আর দুইদিন পর তোমাদের সাথে আমার পরীক্ষা ক্লাস টেস্ট পরীক্ষার প্রস্তুতি নিয়ে এসো যাতে কোনরকম বিলম্ব না হয় পরীক্ষায়।'),
-                            SizedBox(height: size.height*0.00,),
-                            Icon(Icons.favorite_border),
-                            SizedBox(height: size.height*0.00,),
-                            Row(
-                              children: [
-                                Text("249", style:  TextStyle(color: primaryColor,fontSize: 10, fontFamily: "Nun" ),),
-                                SizedBox(width: size.height*0.005,),
-                                Text("Likes", style:  TextStyle(color: Colors.black,fontSize: 10, fontFamily: "Nun" ),),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ),
-                      SizedBox(width: size.width*0.02,),
-                      Container(
-                        padding: EdgeInsets.all(10),
-                        height: size.height*0.2,
-                        width: size.width*0.8,
-                        decoration: BoxDecoration(
-                            color: Color(0xffFBFBFB),
-                            borderRadius: BorderRadius.circular(15)
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                              children: [
-                                Container(
-                                  decoration: BoxDecoration(
-                                      color: Colors.grey[200],
-                                      borderRadius: BorderRadius.circular(120),
-                                      boxShadow: [
-                                        //bottom right shadow is darker shadow
-                                        BoxShadow(
-                                            color: Colors.grey.shade400,
-                                            offset: const Offset(4, 4),
-                                            blurRadius: 15,
-                                            spreadRadius: 1
-                                        ),
-
-                                        //top left shaow lighter
-                                        const BoxShadow(
-                                          color: Colors.white,
-                                          offset: Offset(-5, -5),
-                                          blurRadius: 15,
-                                          spreadRadius: 1,
-                                        ),
-                                      ]
-                                  ),
-                                  child:  CircleAvatar(
-                                    backgroundColor: Color(0xffFBFBFB),
-                                    radius: 25 ,
-
-                                  ),
-                                ),
-                                SizedBox(width: size.width*0.02,),
-                                Column(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text("DR. Engr. Sushil Kumer Paul", style: TextStyle(fontFamily: 'Nun', fontWeight: FontWeight.bold, fontSize: 16),),
-                                    Row(
-                                      children: [
-                                        Container(
-                                          padding: EdgeInsets.only(left: 5),
-                                          height: size.height*0.030,
-                                          width: size.width*0.18,
-                                          decoration: BoxDecoration(
-                                              borderRadius: BorderRadius.circular(10),
-                                              color: Color(0xffFFFFFF),
-                                              border: Border.all(
-                                                  color: Color(0xffD6D6D6),
-                                                  width: 2
-                                              )
-                                          ),
-                                          child: Row(
-                                            children: [
-
-                                              Image(image: AssetImage('images/icon11.png'),height: 10, width: 10    ,),
-                                              SizedBox(width: size.width*0.01,),
-                                              Text("All Student", style: TextStyle(fontSize: 8, fontWeight: FontWeight.bold,fontFamily: 'Nun', color: Color(0xff494A4B)),)
-                                            ],
-                                          ),
-                                        ),
-                                        SizedBox(width: size.width*0.01,),
-                                        Container(
-                                          padding: EdgeInsets.only(left: 4),
-                                          height: size.height*0.030,
-                                          width: size.width*0.17,
-                                          decoration: BoxDecoration(
-                                              borderRadius: BorderRadius.circular(10),
-                                              color: Color(0xffFFFFFF),
-                                              border: Border.all(
-                                                  color: Color(0xffD6D6D6),
-                                                  width: 2
-                                              )
-                                          ),
-                                          child: DropdownButtonHideUnderline(
-                                            child: DropdownButton<String>(
-                                                iconSize: 3,
-                                                value: selectedItem1,
-                                                items: items1.map((item) => DropdownMenuItem<String>(
-
-                                                  value: item,
-                                                  child: Row(
-                                                    children: [
-                                                      //Image(image: AssetImage('images/icon12.png'),height: 15, width: 15,),
-                                                      //SizedBox(width: size.width*0.01,),
-                                                      Text(item, style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold,fontFamily: 'Nun', color: Color(0xff494A4B)),)
-                                                    ],
-                                                  ),
-
-                                                ) )
-                                                    .toList(),
-                                                onChanged: (items) => setState(() => selectedItem1 = items,)
-                                            ),
-                                          ),
-                                        ),
-                                        SizedBox(width: size.width*0.01,),
-                                        Container(
-                                          padding: EdgeInsets.only(left: 5),
-                                          height: size.height*0.030,
-                                          width: size.width*0.18,
-                                          decoration: BoxDecoration(
-                                              borderRadius: BorderRadius.circular(10),
-                                              color: Color(0xffFFFFFF),
-                                              border: Border.all(
-                                                  color: Color(0xffD6D6D6),
-                                                  width: 2
-                                              )
-                                          ),
-                                          child: DropdownButtonHideUnderline(
-                                            child: DropdownButton<String>(
+                                                menuMaxHeight: 200,
                                                 iconSize: 2,
                                                 value: selectedItem2,
                                                 items: items2.map((item) => DropdownMenuItem(
@@ -1727,6 +1574,7 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                           child: DropdownButtonHideUnderline(
                                             child: DropdownButton<String>(
+                                                menuMaxHeight: 200,
                                                 iconSize: 3,
                                                 value: selectedItem1,
                                                 items: items1.map((item) => DropdownMenuItem<String>(
@@ -1761,6 +1609,7 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                           child: DropdownButtonHideUnderline(
                                             child: DropdownButton<String>(
+                                                menuMaxHeight: 200,
                                                 iconSize: 2,
                                                 value: selectedItem2,
                                                 items: items2.map((item) => DropdownMenuItem(
@@ -1889,6 +1738,7 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                           child: DropdownButtonHideUnderline(
                                             child: DropdownButton<String>(
+                                                menuMaxHeight: 200,
                                                 iconSize: 3,
                                                 value: selectedItem1,
                                                 items: items1.map((item) => DropdownMenuItem<String>(
@@ -1923,6 +1773,7 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                           child: DropdownButtonHideUnderline(
                                             child: DropdownButton<String>(
+                                                menuMaxHeight: 200,
                                                 iconSize: 2,
                                                 value: selectedItem2,
                                                 items: items2.map((item) => DropdownMenuItem(
@@ -2051,6 +1902,7 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                           child: DropdownButtonHideUnderline(
                                             child: DropdownButton<String>(
+                                                menuMaxHeight: 200,
                                                 iconSize: 3,
                                                 value: selectedItem1,
                                                 items: items1.map((item) => DropdownMenuItem<String>(
@@ -2085,6 +1937,171 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                           child: DropdownButtonHideUnderline(
                                             child: DropdownButton<String>(
+                                                menuMaxHeight: 200,
+                                                iconSize: 2,
+                                                value: selectedItem2,
+                                                items: items2.map((item) => DropdownMenuItem(
+                                                  value: item,
+                                                  child: Row(
+                                                    children: [
+                                                      //Image(image: AssetImage('images/icon12.png'),height: 15, width: 15,),
+                                                      //SizedBox(width: size.width*0.01,),
+                                                      Text(item, style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold,fontFamily: 'Nun', color: Color(0xff494A4B)),)
+                                                    ],
+                                                  ),
+
+                                                ) )
+                                                    .toList(),
+                                                onChanged: (item) => setState(() => selectedItem2 = item,)
+                                            ),
+                                          ),
+                                        ),
+
+
+                                      ],
+                                    )
+                                  ],
+                                )
+
+                              ],
+                            ),
+                            SizedBox(height: size.height*0.02,),
+                            Text('আর দুইদিন পর তোমাদের সাথে আমার পরীক্ষা ক্লাস টেস্ট পরীক্ষার প্রস্তুতি নিয়ে এসো যাতে কোনরকম বিলম্ব না হয় পরীক্ষায়।'),
+                            SizedBox(height: size.height*0.00,),
+                            Icon(Icons.favorite_border),
+                            SizedBox(height: size.height*0.00,),
+                            Row(
+                              children: [
+                                Text("249", style:  TextStyle(color: primaryColor,fontSize: 10, fontFamily: "Nun" ),),
+                                SizedBox(width: size.height*0.005,),
+                                Text("Likes", style:  TextStyle(color: Colors.black,fontSize: 10, fontFamily: "Nun" ),),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(width: size.width*0.02,),
+                      Container(
+                        padding: EdgeInsets.all(10),
+                        height: size.height*0.2,
+                        width: size.width*0.8,
+                        decoration: BoxDecoration(
+                            color: Color(0xffFBFBFB),
+                            borderRadius: BorderRadius.circular(15)
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              children: [
+                                Container(
+                                  decoration: BoxDecoration(
+                                      color: Colors.grey[200],
+                                      borderRadius: BorderRadius.circular(120),
+                                      boxShadow: [
+                                        //bottom right shadow is darker shadow
+                                        BoxShadow(
+                                            color: Colors.grey.shade400,
+                                            offset: const Offset(4, 4),
+                                            blurRadius: 15,
+                                            spreadRadius: 1
+                                        ),
+
+                                        //top left shaow lighter
+                                        const BoxShadow(
+                                          color: Colors.white,
+                                          offset: Offset(-5, -5),
+                                          blurRadius: 15,
+                                          spreadRadius: 1,
+                                        ),
+                                      ]
+                                  ),
+                                  child:  CircleAvatar(
+                                    backgroundColor: Color(0xffFBFBFB),
+                                    radius: 25 ,
+
+                                  ),
+                                ),
+                                SizedBox(width: size.width*0.02,),
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text("DR. Engr. Sushil Kumer Paul", style: TextStyle(fontFamily: 'Nun', fontWeight: FontWeight.bold, fontSize: 16),),
+                                    Row(
+                                      children: [
+                                        Container(
+                                          padding: EdgeInsets.only(left: 5),
+                                          height: size.height*0.030,
+                                          width: size.width*0.18,
+                                          decoration: BoxDecoration(
+                                              borderRadius: BorderRadius.circular(10),
+                                              color: Color(0xffFFFFFF),
+                                              border: Border.all(
+                                                  color: Color(0xffD6D6D6),
+                                                  width: 2
+                                              )
+                                          ),
+                                          child: Row(
+                                            children: [
+
+                                              Image(image: AssetImage('images/icon11.png'),height: 10, width: 10    ,),
+                                              SizedBox(width: size.width*0.01,),
+                                              Text("All Student", style: TextStyle(fontSize: 8, fontWeight: FontWeight.bold,fontFamily: 'Nun', color: Color(0xff494A4B)),)
+                                            ],
+                                          ),
+                                        ),
+                                        SizedBox(width: size.width*0.01,),
+                                        Container(
+                                          padding: EdgeInsets.only(left: 4),
+                                          height: size.height*0.030,
+                                          width: size.width*0.17,
+                                          decoration: BoxDecoration(
+                                              borderRadius: BorderRadius.circular(10),
+                                              color: Color(0xffFFFFFF),
+                                              border: Border.all(
+                                                  color: Color(0xffD6D6D6),
+                                                  width: 2
+                                              )
+                                          ),
+                                          child: DropdownButtonHideUnderline(
+                                            child: DropdownButton<String>(
+                                                menuMaxHeight: 200,
+                                                iconSize: 3,
+                                                value: selectedItem1,
+                                                items: items1.map((item) => DropdownMenuItem<String>(
+
+                                                  value: item,
+                                                  child: Row(
+                                                    children: [
+                                                      //Image(image: AssetImage('images/icon12.png'),height: 15, width: 15,),
+                                                      //SizedBox(width: size.width*0.01,),
+                                                      Text(item, style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold,fontFamily: 'Nun', color: Color(0xff494A4B)),)
+                                                    ],
+                                                  ),
+
+                                                ) )
+                                                    .toList(),
+                                                onChanged: (items) => setState(() => selectedItem1 = items,)
+                                            ),
+                                          ),
+                                        ),
+                                        SizedBox(width: size.width*0.01,),
+                                        Container(
+                                          padding: EdgeInsets.only(left: 5),
+                                          height: size.height*0.030,
+                                          width: size.width*0.18,
+                                          decoration: BoxDecoration(
+                                              borderRadius: BorderRadius.circular(10),
+                                              color: Color(0xffFFFFFF),
+                                              border: Border.all(
+                                                  color: Color(0xffD6D6D6),
+                                                  width: 2
+                                              )
+                                          ),
+                                          child: DropdownButtonHideUnderline(
+                                            child: DropdownButton<String>(
+                                                menuMaxHeight: 200,
                                                 iconSize: 2,
                                                 value: selectedItem2,
                                                 items: items2.map((item) => DropdownMenuItem(
