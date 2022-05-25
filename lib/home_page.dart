@@ -13,7 +13,7 @@ class _HomePageState extends State<HomePage> {
 
   final List<String> items1 = ['CMT-1st', 'CMT-2nd', 'CMT-3rd', 'CMT-4th', 'CMT-5th' , 'CMT-6th', 'CMT-7th', 'CMT-8th',
     'ENT-1st', 'ENT-2nd', 'ENT-3rd', 'ENT-4th', 'ENT-5th' , 'ENT-6th', 'ENT-7th', 'ENT-8th',
-    'EEE', 'Civil', 'MC' , 'ENT', 'EEE',];
+    'EEE', 'Civil', 'MC' , 'ENT', 'EEE-1st'];
   String? selectedItem1 = 'CMT-1st';
 
   final List<String> items2 = [ '1st Shift', '2nd Shift'];
