@@ -29,12 +29,20 @@ class _StudentProfileState extends State<StudentProfile> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                IconButton(
-                    onPressed: (){
-                      Navigator.pop(context);
-                    },
-                    icon: const Icon(Icons.arrow_back_ios_outlined, size: 15,)
+
+                InkWell(
+                  onTap: (){
+                    Navigator.pop(context);
+                  },
+                  child: Container(
+                    padding: EdgeInsets.only(top: 5, bottom: 10),
+                    child: Icon(
+                      Icons.arrow_back,
+                      size: 20,
+                    ),
+                  ),
                 ),
+
                 Row(
                   children: [
                     Container(
@@ -161,11 +169,17 @@ class _StudentProfileState extends State<StudentProfile> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                IconButton(
-                    onPressed: (){
-                      Navigator.pop(context);
-                    },
-                    icon: const Icon(Icons.arrow_back_ios_outlined, size: 15,)
+                InkWell(
+                  onTap: (){
+                    Navigator.pop(context);
+                  },
+                  child: Container(
+                    padding: EdgeInsets.only(top: 5, bottom: 10),
+                    child: Icon(
+                      Icons.arrow_back,
+                      size: 20,
+                    ),
+                  ),
                 ),
                 Row(
                   children: [

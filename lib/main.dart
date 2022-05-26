@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mupi_project/Information/student_info.dart';
 import 'package:mupi_project/Profile/student_profile.dart';
 import 'package:mupi_project/Profile/teacher_profile.dart';
 import 'package:mupi_project/Splash_Screen/splash_s1.dart';
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
       ),
         debugShowCheckedModeBanner: false,
         home: //Splash_s1(),
-        StudentProfile(),
+      StudentInfo()
+        //StudentProfile(),
     );
   }
 }
