@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mupi_project/Profile/student_profile.dart';
 import 'package:mupi_project/Profile/teacher_profile.dart';
 import 'package:mupi_project/Splash_Screen/splash_s1.dart';
 import 'package:mupi_project/form/teacher_form.dart';
@@ -18,10 +19,8 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Nun'
       ),
         debugShowCheckedModeBanner: false,
-        home: Splash_s1(),
-        //TeacherProfile(),
-        //HomePage()
-      //dropDown()
+        home: //Splash_s1(),
+        StudentProfile(),
     );
   }
 }

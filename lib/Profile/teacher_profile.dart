@@ -4,15 +4,18 @@ class TeacherProfile extends StatefulWidget {
   const TeacherProfile({Key? key}) : super(key: key);
 
   @override
-  State<TeacherProfile> createState() => _TeacherProfileState();
+  State<TeacherProfile> createState() => _TeacherProfileState(); 
 }
 
 class _TeacherProfileState extends State<TeacherProfile> {
 
-  final List<String> items1 = ['CMT-1st', 'CMT-2nd', 'CMT-3rd', 'CMT-4th', 'CMT-5th' , 'CMT-6th', 'CMT-7th', 'CMT-8th',
+  final List<String> items1 = ['CST-1st', 'CST-2nd', 'CST-3rd', 'CST-4th', 'CST-5th' , 'CST-6th', 'CST-7th', 'CST-8th',
+    'CT-1st', 'CT-2nd', 'CT-3rd', 'CT-4th', 'CT-5th' , 'CT-6th', 'CT-7th', 'CT-8th',
+    'ET-1st', 'ET-2nd', 'ET-3rd', 'ET-4th', 'ET-5th' , 'ET-6th', 'ET-7th', 'ET-8th',
     'ENT-1st', 'ENT-2nd', 'ENT-3rd', 'ENT-4th', 'ENT-5th' , 'ENT-6th', 'ENT-7th', 'ENT-8th',
-    'EEE', 'Civil', 'MC' , 'ENT', 'EEE-1st'];
-  String? selectedItem1 = 'CMT-1st';
+    'RAC-1st', 'RAC-2nd', 'RAC-3rd', 'RAC-4th', 'RAC-5th' , 'RAC-6th', 'RAC-7th', 'RAC-8th',
+    'EEE-1st', 'EEE-2nd', 'EEE-3rd', 'EEE-4th', 'EEE-5th' , 'EEE-6th', 'EEE-7th', 'EEE-8th'];
+  String? selectedItem1 = 'CST-1st';
 
   final List<String> items2 = [ '1st Shift', '2nd Shift'];
   String? selectedItem2 = '1st Shift';
@@ -35,7 +38,8 @@ class _TeacherProfileState extends State<TeacherProfile> {
                     onPressed: (){
                       Navigator.pop(context);
                     },
-                    icon: Icon(Icons.arrow_back_ios_outlined)),
+                    icon: const Icon(Icons.arrow_back_ios_outlined, size: 15,)
+                ),
                 Container(
                   decoration: BoxDecoration(
                       color: Colors.grey[200],
@@ -58,14 +62,14 @@ class _TeacherProfileState extends State<TeacherProfile> {
                         ),
                       ]
                   ),
-                  child:  CircleAvatar(
+                  child: const CircleAvatar(
                     backgroundColor: Color(0xffFBFBFB),
                     radius: 50 ,
 
                   ),
                 ),
                 SizedBox(height: size.height*0.01,),
-                Text('Dr.Engr Sushil Kumer Paul', style: TextStyle(fontWeight: FontWeight.w700),),
+                const Text('Dr.Engr Sushil Kumer Paul', style: TextStyle(fontWeight: FontWeight.w700),),
                 Text('Abc@gmail.com', style: TextStyle(color: Colors.grey[500]),),
                 Text('+8801689517629', style: TextStyle(color: Colors.grey[500]),),
                 Text('BBA, BAC, PHD in Mesign Learning', style: TextStyle(color: Colors.grey[500]),),
@@ -78,7 +82,7 @@ class _TeacherProfileState extends State<TeacherProfile> {
                     color: primeryColor,
                     borderRadius: BorderRadius.circular(10)
                   ),
-                  child: Center(
+                  child: const Center(
                     child: Text('Edit Profile', style: TextStyle(color: Colors.white, fontSize: 12, fontWeight: FontWeight.w800),),
                   ),
                 ),
@@ -98,7 +102,7 @@ class _TeacherProfileState extends State<TeacherProfile> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Post', style: TextStyle(fontWeight: FontWeight.w900, fontSize: 16),),
+                        const Text('Post', style: TextStyle(fontWeight: FontWeight.w900, fontSize: 16),),
                         SizedBox(height: size.height*0.02,),
                         Row(
                           children: [
@@ -124,7 +128,7 @@ class _TeacherProfileState extends State<TeacherProfile> {
                                     ),
                                   ]
                               ),
-                              child:  CircleAvatar(
+                              child: const CircleAvatar(
                                 backgroundColor: Color(0xffFBFBFB),
                                 radius: 25 ,
 
@@ -150,7 +154,7 @@ class _TeacherProfileState extends State<TeacherProfile> {
 
                                   ]
                               ),
-                              child: Center(
+                              child: const Center(
                                 child: Text('What\'s on your mind?', style: TextStyle(color: Color(0xff494A4B)),),
                               ),
                             )
