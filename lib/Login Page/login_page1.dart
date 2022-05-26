@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mupi_project/login_page2.dart';
+import 'package:mupi_project/Login%20Page/login_page2.dart';
 
 
 class login_page1 extends StatefulWidget {

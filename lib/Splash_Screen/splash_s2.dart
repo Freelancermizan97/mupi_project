@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:mupi_project/login_page1.dart';
+import 'package:mupi_project/Login%20Page/login_page1.dart';
 
 
 class Splash_s2 extends StatefulWidget {
@@ -80,7 +80,7 @@ class _splash_s2State extends State<Splash_s2> {
                     'district. This institute was established in 2006 with 04(four) '
                     'technologies namely Computer, Electronics, Electro-medical and '
                     'Instrumentation, and process control technology.', textAlign: TextAlign.center, style: TextStyle(fontSize: 14, color: Color(0xff687A7D)),),
-              )
+              ),
 
             ],
           ),

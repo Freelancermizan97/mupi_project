@@ -37,138 +37,6 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Widget SuggestionCard ({image, text1, text2, text3, text4 }){
-    Size size = MediaQuery.of(context).size;
-    return Container(
-      padding: EdgeInsets.only(left: 20, top: 5, bottom: 5, right: 10),
-      height: size.height*0.1,
-      width: size.width*0.75,
-      decoration: BoxDecoration(
-          color: Color(0xffFBFBFB),
-          borderRadius: BorderRadius.circular(15),
-          boxShadow: [
-            //bottom right shadow is darker shadow
-            BoxShadow(
-                color: Colors.grey.shade400,
-                offset: const Offset(4, 4),
-                blurRadius: 5,
-                spreadRadius: 2
-            ),
-
-            //top left shaow lighter
-            const BoxShadow(
-              color: Colors.white,
-              offset: Offset(-5, -5),
-              blurRadius: 15,
-              spreadRadius: 1,
-            ),
-          ]
-
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-
-        children: [
-          Container(
-            child: Row(
-              children: [
-                Image(
-                  image: AssetImage(image),
-                  height: 40,
-                  width: 40,
-                ),
-                SizedBox(width: size.width*0.01,),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(text1, style: TextStyle(fontFamily: 'Nun', fontSize: 15),),
-                    Text(text2, style: TextStyle(fontFamily: 'Nun', fontSize: 12, color: Colors.grey[500]),),
-                    Text(text3, style: TextStyle(fontFamily: 'Nun', fontSize: 10, color: Colors.grey[500]),),
-                  ],
-                ),
-              ],
-            ),
-          ),
-          Container(
-            child: Text(
-              text4,
-              style: TextStyle(fontFamily: 'Nun', color: primaryColor, fontWeight: FontWeight.bold, fontSize: 10),
-            ),
-          )
-
-
-        ],
-      ),
-    );
-  }
-
-
-
-
-  Widget InfoCard ({image, text1, text2, icon }){
-    Size size = MediaQuery.of(context).size;
-    return Container(
-      padding: EdgeInsets.only(left: 20, top: 5, bottom: 5, right: 10),
-      height: size.height*0.11,
-      width: size.width,
-      decoration: BoxDecoration(
-          color: Color(0xffFBFBFB),
-          borderRadius: BorderRadius.circular(15),
-          boxShadow: [
-            //bottom right shadow is darker shadow
-            BoxShadow(
-                color: Colors.grey.shade400,
-                offset: const Offset(4, 4),
-                blurRadius: 5,
-                spreadRadius: 2
-            ),
-
-            //top left shaow lighter
-            const BoxShadow(
-              color: Colors.white,
-              offset: Offset(-5, -5),
-              blurRadius: 15,
-              spreadRadius: 1,
-            ),
-          ]
-
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-
-        children: [
-          Container(
-            child: Row(
-              children: [
-                Image(
-                  image: AssetImage(image),
-                  height: 50,
-                  width: 50,
-                ),
-                SizedBox(width: size.width*0.02,),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(text1, style: TextStyle(fontFamily: 'Nun', fontSize: 17),),
-                    Text(text2, style: TextStyle(fontFamily: 'Nun', fontSize: 11, color: Colors.grey[500]),),
-
-                  ],
-                ),
-              ],
-            ),
-          ),
-          Container(
-              child: Icon(icon, color: primaryColor)
-          ),
-
-
-        ],
-      ),
-    );
-  }
-  
 
   Widget getFuntion (var w){
     Size size = MediaQuery.of(context).size;
@@ -2266,6 +2134,139 @@ class _HomePageState extends State<HomePage> {
         ),
       );
     }
+  }
+
+
+
+
+
+  Widget SuggestionCard ({image, text1, text2, text3, text4 }){
+    Size size = MediaQuery.of(context).size;
+    return Container(
+      padding: EdgeInsets.only(left: 20, top: 5, bottom: 5, right: 10),
+      height: size.height*0.1,
+      width: size.width*0.75,
+      decoration: BoxDecoration(
+          color: Color(0xffFBFBFB),
+          borderRadius: BorderRadius.circular(15),
+          boxShadow: [
+            //bottom right shadow is darker shadow
+            BoxShadow(
+                color: Colors.grey.shade400,
+                offset: const Offset(4, 4),
+                blurRadius: 5,
+                spreadRadius: 2
+            ),
+
+            //top left shaow lighter
+            const BoxShadow(
+              color: Colors.white,
+              offset: Offset(-5, -5),
+              blurRadius: 15,
+              spreadRadius: 1,
+            ),
+          ]
+
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
+        children: [
+          Container(
+            child: Row(
+              children: [
+                Image(
+                  image: AssetImage(image),
+                  height: 40,
+                  width: 40,
+                ),
+                SizedBox(width: size.width*0.01,),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(text1, style: TextStyle(fontFamily: 'Nun', fontSize: 15),),
+                    Text(text2, style: TextStyle(fontFamily: 'Nun', fontSize: 12, color: Colors.grey[500]),),
+                    Text(text3, style: TextStyle(fontFamily: 'Nun', fontSize: 10, color: Colors.grey[500]),),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          Container(
+            child: Text(
+              text4,
+              style: TextStyle(fontFamily: 'Nun', color: primaryColor, fontWeight: FontWeight.bold, fontSize: 10),
+            ),
+          )
+
+
+        ],
+      ),
+    );
+  }
+
+  Widget InfoCard ({image, text1, text2, icon }){
+    Size size = MediaQuery.of(context).size;
+    return Container(
+      padding: EdgeInsets.only(left: 20, top: 5, bottom: 5, right: 10),
+      height: size.height*0.11,
+      width: size.width,
+      decoration: BoxDecoration(
+          color: Color(0xffFBFBFB),
+          borderRadius: BorderRadius.circular(15),
+          boxShadow: [
+            //bottom right shadow is darker shadow
+            BoxShadow(
+                color: Colors.grey.shade400,
+                offset: const Offset(4, 4),
+                blurRadius: 5,
+                spreadRadius: 2
+            ),
+
+            //top left shaow lighter
+            const BoxShadow(
+              color: Colors.white,
+              offset: Offset(-5, -5),
+              blurRadius: 15,
+              spreadRadius: 1,
+            ),
+          ]
+
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
+        children: [
+          Container(
+            child: Row(
+              children: [
+                Image(
+                  image: AssetImage(image),
+                  height: 50,
+                  width: 50,
+                ),
+                SizedBox(width: size.width*0.02,),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(text1, style: TextStyle(fontFamily: 'Nun', fontSize: 17),),
+                    Text(text2, style: TextStyle(fontFamily: 'Nun', fontSize: 11, color: Colors.grey[500]),),
+
+                  ],
+                ),
+              ],
+            ),
+          ),
+          Container(
+              child: Icon(icon, color: primaryColor)
+          ),
+
+
+        ],
+      ),
+    );
   }
 
 
