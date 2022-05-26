@@ -13,10 +13,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  MaterialApp(
+      theme: ThemeData(
+        fontFamily: 'Nun'
+      ),
         debugShowCheckedModeBanner: false,
-        home: //Splash_s1(),
-        TeacherProfile(),
+        home: Splash_s1(),
+        //TeacherProfile(),
         //HomePage()
       //dropDown()
     );

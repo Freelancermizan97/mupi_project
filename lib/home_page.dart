@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mupi_project/Profile/teacher_profile.dart';
 import 'package:sizer/sizer.dart';
 
 
@@ -280,32 +281,37 @@ class _HomePageState extends State<HomePage> {
                           children: [
                             Row(
                               children: [
-                                Container(
-                                  decoration: BoxDecoration(
-                                      color: Colors.grey[200],
-                                      borderRadius: BorderRadius.circular(120),
-                                      boxShadow: [
-                                        //bottom right shadow is darker shadow
-                                        BoxShadow(
-                                            color: Colors.grey.shade400,
-                                            offset: const Offset(4, 4),
+                                InkWell(
+                                  onTap: (){
+                                    Navigator.push(context, MaterialPageRoute(builder: (context)=> TeacherProfile()));
+                                  },
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                        color: Colors.grey[200],
+                                        borderRadius: BorderRadius.circular(120),
+                                        boxShadow: [
+                                          //bottom right shadow is darker shadow
+                                          BoxShadow(
+                                              color: Colors.grey.shade400,
+                                              offset: const Offset(4, 4),
+                                              blurRadius: 15,
+                                              spreadRadius: 1
+                                          ),
+
+                                          //top left shaow lighter
+                                          const BoxShadow(
+                                            color: Colors.white,
+                                            offset: Offset(-5, -5),
                                             blurRadius: 15,
-                                            spreadRadius: 1
-                                        ),
+                                            spreadRadius: 1,
+                                          ),
+                                        ]
+                                    ),
+                                    child:  CircleAvatar(
+                                      backgroundColor: Color(0xffFBFBFB),
+                                      radius: 25 ,
 
-                                        //top left shaow lighter
-                                        const BoxShadow(
-                                          color: Colors.white,
-                                          offset: Offset(-5, -5),
-                                          blurRadius: 15,
-                                          spreadRadius: 1,
-                                        ),
-                                      ]
-                                  ),
-                                  child:  CircleAvatar(
-                                    backgroundColor: Color(0xffFBFBFB),
-                                    radius: 25 ,
-
+                                    ),
                                   ),
                                 ),
                                 SizedBox(width: size.width*0.02,),
