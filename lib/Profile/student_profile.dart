@@ -78,6 +78,7 @@ class _StudentProfileState extends State<StudentProfile> {
                         Text('MD. Mizan Hossen', style: TextStyle(fontWeight: FontWeight.w800, fontSize: 17.sp),),
                         SizedBox(height: 5.h),
                         Text('Computer Science and Technology,\n5th Semester, 1st Shift', style: TextStyle(color: Colors.grey[500], fontSize: 14.sp),),
+
                       ],
                     ),
                   ],

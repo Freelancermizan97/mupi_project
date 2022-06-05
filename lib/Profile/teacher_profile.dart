@@ -39,7 +39,7 @@ class _TeacherProfileState extends State<TeacherProfile> {
                     Navigator.pop(context);
                   },
                   child: Container(
-                    padding: EdgeInsets.only(top: 5.r, bottom: 10.r),
+                    padding: EdgeInsets.only(top: 15.r, bottom: 10.r),
                     child: Icon(
                       Icons.arrow_back,
                       size: 20.sp,

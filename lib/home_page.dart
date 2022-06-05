@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mupi_project/Information/student_info.dart';
+import 'package:mupi_project/Information/teacher_info.dart';
+import 'package:mupi_project/Profile/student_profile.dart';
 import 'package:mupi_project/Profile/teacher_profile.dart';
 
 
@@ -60,7 +62,7 @@ class _HomePageState extends State<HomePage> {
                             children: [
                               InkWell(
                                 onTap: (){
-                                  Navigator.push(context, MaterialPageRoute(builder: (context)=> StudentInfo()));
+                                  Navigator.push(context, MaterialPageRoute(builder: (context)=> StudentProfile()));
                                 },
                                 child: Container(
                                   decoration: BoxDecoration(
@@ -986,18 +988,28 @@ class _HomePageState extends State<HomePage> {
                                 icon: Icons.add_alert_sharp,
                               ),
                               SizedBox(height: 10.h,),
-                              InfoCard(
-                                image: 'images/icon5.png',
-                                text1: 'Teachers Information',
-                                text2: 'Here is the information of \nall the teachers recorded',
+                              InkWell(
+                                onTap: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context)=>TeacherInfo()));
+                                },
+                                child: InfoCard(
+                                  image: 'images/icon5.png',
+                                  text1: 'Teachers Information',
+                                  text2: 'Here is the information of \nall the teachers recorded',
+                                ),
                               ),
                               SizedBox(height: 10.h),
 
-                              InfoCard(
-                                image: 'images/icon8.png',
-                                text1: 'Student Information',
-                                text2: 'Here is the information of \nall the teachers recorded',
+                              InkWell(
+                                onTap: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context)=>StudentInfo()));
+                                },
+                                child: InfoCard(
+                                  image: 'images/icon8.png',
+                                  text1: 'Student Information',
+                                  text2: 'Here is the information of \nall the teachers recorded',
 
+                                ),
                               ),
                               SizedBox(height: 10.h),
                               InfoCard(

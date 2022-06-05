@@ -1,22 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class StudentInfo extends StatefulWidget {
-  const StudentInfo({Key? key}) : super(key: key);
+class TeacherInfo extends StatefulWidget {
+  const TeacherInfo({Key? key}) : super(key: key);
 
   @override
-  State<StudentInfo> createState() => _StudentInfoState();
+  State<TeacherInfo> createState() => _TeacherInfoState();
 }
 
-class _StudentInfoState extends State<StudentInfo> {
-
+class _TeacherInfoState extends State<TeacherInfo> {
   Color primeryColor = Color(0xff00BFA6);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xffFFFFFF),
-
       body: SingleChildScrollView(
         child: SafeArea(
           child: Padding(
@@ -49,12 +47,11 @@ class _StudentInfoState extends State<StudentInfo> {
                           ),
                           Container(
                             //width: 200,
-                            child:Text('Student Information', style: TextStyle(color: Colors.black, fontSize: 25.sp),),
+                            child:Text('Teachers Information', style: TextStyle(color: Colors.black, fontSize: 25.sp),),
                           ),
                           Container(),
                         ],
                       ),
-
                       Text("Munshiganj Polytechnic Institute", style: TextStyle(fontSize: 14.sp),),
                       Text("Mirkardim, Munshiganj",style: TextStyle(fontSize: 10.sp, color: Color(0xff494A4B)),),
                       SizedBox(height: 10.h,),
@@ -62,8 +59,8 @@ class _StudentInfoState extends State<StudentInfo> {
                         height: 36.h,
                         width: 200.w,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Color(0xffF4F4F4)
+                            borderRadius: BorderRadius.circular(10),
+                            color: Color(0xffF4F4F4)
                         ),
                         child: Center(
                           child: Text("Search", style: TextStyle(fontSize: 12.sp, color: Color(0xffC2C2C2)),),
@@ -74,47 +71,58 @@ class _StudentInfoState extends State<StudentInfo> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           InfoCard(
-                              image: 'images/mizan.jpg',
-                              text1: 'MD. Mizan Hossen',
-                              text2: 'Computer Science and Technology, 5th Semester, !st Shift'
+                              image: '',
+                              text1: 'Dr. Engr. Sushil Kumer Paul',
+                              text2: 'Headmaster of Munshiganj \nPolytechnic Institute'
                           ),
                           SizedBox(height: 20.h,),
                           InfoCard(
-                              image: 'images/sayedd.jpg',
-                              text1: 'Abu Sayed',
-                              text2: 'Computer Science and Technology, 5th Semester, !st Shift'
+                              image: '',
+                              text1: 'Mohammad Alauddin',
+                              text2: 'CI Computer Science and Engineering, Munshiganj Polytechnic Institute ,1st Shift.'
                           ),
                           SizedBox(height: 20.h,),
                           InfoCard(
-                              image: 'images/Zunaed2.jpg',
-                              text1: 'Zunaed Ibne Faruk',
-                              text2: 'Computer Science and Technology, 5th Semester, !st Shift'
+                              image: '',
+                              text1: 'Ayesha Khanum',
+                              text2: 'senior instructor Computer Science and Engineering, Munshiganj Polytechnic Institute ,1st Shift.'
                           ),
                           SizedBox(height: 20.h,),
                           InfoCard(
-                              image: 'images/mizan.jpg',
-                              text1: 'MD. Mizan Hossen',
+                              image: '',
+                              text1: 'Tarapodo mondol',
                               text2: 'Computer Science and Technology,5th Semester, !st Shift'
                           ),
                           SizedBox(height: 20.h,),
                           InfoCard(
-                              image: 'images/mizan.jpg',
-                              text1: 'MD. Mizan Hossen',
-                              text2: 'Computer Science and Technology, 5th Semester, !st Shift'
+                              image: '',
+                              text1: 'Rajibul Islam',
+                              text2: 'senior instructor, Electronics Technology , Munshiganj Polytechnic Institute ,1st And 2nd Shift.'
                           ),
                           SizedBox(height: 20.h,),
                           InfoCard(
-                              image: 'images/sayedd.jpg',
-                              text1: 'Abu Sayed',
-                              text2: 'Computer Science and Technology, 5th Semester, !st Shift'
+                              image: '',
+                              text1: 'Mukta Moni',
+                              text2: 'senior instructor Computer Science and '
                           ),
                           SizedBox(height: 20.h,),
                           InfoCard(
-                              image: 'images/Zunaed2.jpg',
-                              text1: 'Zunaed Ibne Faruk',
-                              text2: 'Computer Science and Technology, 5th Semester, !st Shift'
+                              image: '',
+                              text1: 'Ayesha Khanum',
+                              text2: 'senior instructor Computer Science and Engineering, Munshiganj Polytechnic Institute ,1st Shift.'
                           ),
                           SizedBox(height: 20.h,),
+                          InfoCard(
+                              image: '',
+                              text1: 'Tarapodo mondol',
+                              text2: 'Computer Science and Technology,5th Semester, !st Shift'
+                          ),
+                          SizedBox(height: 20.h,),
+                          InfoCard(
+                              image: '',
+                              text1: 'Rajibul Islam',
+                              text2: 'senior instructor, Electronics Technology , Munshiganj Polytechnic Institute ,1st And 2nd Shift.'
+                          ),
                         ],
                       )
 
@@ -173,7 +181,8 @@ class _StudentInfoState extends State<StudentInfo> {
               SizedBox(height: 5.h),
               Container(
                 width: 200.w,
-                  child: Text(text2, style: TextStyle(color: Colors.grey[500], fontSize: 11.sp),)
+                child:  Text(text2, textAlign: TextAlign.start, style: TextStyle(color: Colors.grey[500], fontSize: 11.sp),),
+
               ),
 
             ],
