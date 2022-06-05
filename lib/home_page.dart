@@ -156,177 +156,196 @@ class _HomePageState extends State<HomePage> {
                           borderRadius: BorderRadius.circular(15.r)
                       ),
                       child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Row(
-                            children: [
-                              InkWell(
-                                onTap: (){
-                                  Navigator.push(context, MaterialPageRoute(builder: (context)=> TeacherProfile()));
-                                },
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                      color: Colors.grey[200],
-                                      borderRadius: BorderRadius.circular(120.r),
-                                      boxShadow: [
-                                        //bottom right shadow is darker shadow
-                                        BoxShadow(
-                                            color: Colors.grey.shade400,
-                                            offset: const Offset(4, 4),
-                                            blurRadius: 15,
-                                            spreadRadius: 1
-                                        ),
+                          Container(
+                            child:Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  children: [
+                                    InkWell(
+                                      onTap: (){
+                                        Navigator.push(context, MaterialPageRoute(builder: (context)=> TeacherProfile()));
+                                      },
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                            color: Colors.grey[200],
+                                            borderRadius: BorderRadius.circular(120.r),
+                                            boxShadow: [
+                                              //bottom right shadow is darker shadow
+                                              BoxShadow(
+                                                  color: Colors.grey.shade400,
+                                                  offset: const Offset(4, 4),
+                                                  blurRadius: 15,
+                                                  spreadRadius: 1
+                                              ),
 
-                                        //top left shaow lighter
-                                        const BoxShadow(
-                                          color: Colors.white,
-                                          offset: Offset(-5, -5),
-                                          blurRadius: 15,
-                                          spreadRadius: 1,
+                                              //top left shaow lighter
+                                              const BoxShadow(
+                                                color: Colors.white,
+                                                offset: Offset(-5, -5),
+                                                blurRadius: 15,
+                                                spreadRadius: 1,
+                                              ),
+                                            ]
                                         ),
-                                      ]
-                                  ),
-                                  child:  CircleAvatar(
-                                    backgroundColor: Color(0xffFBFBFB),
-                                    radius: 25.r ,
+                                        child:  CircleAvatar(
+                                          backgroundColor: Color(0xffFBFBFB),
+                                          radius: 25.r ,
 
-                                  ),
+                                        ),
+                                      ),
+                                    ),
+                                    SizedBox(width: 10.w),
+                                    Column(
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text("DR. Engr. Sushil Kumer Paul", style: TextStyle(fontFamily: 'Nun', fontWeight: FontWeight.bold, fontSize: 16.sp),),
+                                        Row(
+                                          children: [
+                                            Container(
+                                              padding: EdgeInsets.only(left: 5.r),
+                                              height: 25.h,
+                                              width: 70.w,
+                                              decoration: BoxDecoration(
+                                                  borderRadius: BorderRadius.circular(10.r),
+                                                  color: Color(0xffFFFFFF),
+                                                  border: Border.all(
+                                                      color: Color(0xffD6D6D6),
+                                                      width: 2.w
+                                                  )
+                                              ),
+                                              child: DropdownButtonHideUnderline(
+                                                child: DropdownButton<String>(
+                                                    menuMaxHeight: 200.h,
+                                                    iconSize: 15.sp,
+                                                    value: selectedItem,
+                                                    items: items.map((item) => DropdownMenuItem<String>(
+                                                      value: item,
+                                                      child: Row(
+                                                        children: [
+                                                          //Image(image: AssetImage('images/icon12.png'),height: 15, width: 15,),
+                                                          SizedBox(width: 10.w),
+                                                          Text(item, style: TextStyle(fontSize: 10.sp, fontWeight: FontWeight.bold,fontFamily: 'Nun', color: Color(0xff494A4B)),)
+                                                        ],
+                                                      ),
+
+                                                    ) )
+                                                        .toList(),
+                                                    onChanged: (items) => setState(() => selectedItem = items,)
+                                                ),
+                                              ),
+                                            ),
+                                            SizedBox(width: 5.h),
+
+                                            Container(
+                                              padding: EdgeInsets.only(left: 5.r),
+                                              height: 25.h,
+                                              width: 90.w,
+                                              decoration: BoxDecoration(
+                                                  borderRadius: BorderRadius.circular(10.r),
+                                                  color: Color(0xffFFFFFF),
+                                                  border: Border.all(
+                                                      color: Color(0xffD6D6D6),
+                                                      width: 2.w
+                                                  )
+                                              ),
+                                              child: DropdownButtonHideUnderline(
+                                                child: DropdownButton<String>(
+                                                    menuMaxHeight: 200.h,
+                                                    iconSize: 0.sp,
+                                                    value: selectedItem1,
+                                                    items: items1.map((item) => DropdownMenuItem<String>(
+                                                      value: item,
+                                                      child: Row(
+                                                        children: [
+                                                          Image(image: AssetImage('images/icon12.png'),height: 15, width: 15,),
+                                                          SizedBox(width: 10.w),
+                                                          Text(item, style: TextStyle(fontSize: 10.sp, fontWeight: FontWeight.bold,fontFamily: 'Nun', color: Color(0xff494A4B)),)
+                                                        ],
+                                                      ),
+
+                                                    ) )
+                                                        .toList(),
+                                                    onChanged: (items) => setState(() => selectedItem1 = items,)
+                                                ),
+                                              ),
+                                            ),
+
+                                            SizedBox(width: 5.w),
+
+                                            Container(
+                                              padding: EdgeInsets.only(left: 5.r),
+                                              height: 25.h,
+                                              width: 70.w,
+                                              decoration: BoxDecoration(
+                                                  borderRadius: BorderRadius.circular(10.r),
+                                                  color: Color(0xffFFFFFF),
+                                                  border: Border.all(
+                                                      color: Color(0xffD6D6D6),
+                                                      width: 2.w
+                                                  )
+                                              ),
+                                              child: DropdownButtonHideUnderline(
+                                                child: DropdownButton<String>(
+                                                    menuMaxHeight: 200.h,
+                                                    iconSize: 0.sp,
+                                                    value: selectedItem2,
+                                                    items: items2.map((item) => DropdownMenuItem(
+                                                      value: item,
+                                                      child: Row(
+                                                        children: [
+                                                          //Image(image: AssetImage('images/icon12.png'),height: 15, width: 15,),
+                                                          //SizedBox(width: size.width*0.01,),
+                                                          Text(item, style: TextStyle(fontSize: 10.sp, fontWeight: FontWeight.bold,fontFamily: 'Nun', color: Color(0xff494A4B)),)
+                                                        ],
+                                                      ),
+
+                                                    ) )
+                                                        .toList(),
+                                                    onChanged: (item) => setState(() => selectedItem2 = item,)
+                                                ),
+                                              ),
+                                            ),
+
+
+
+                                          ],
+                                        )
+                                      ],
+                                    )
+
+                                  ],
                                 ),
-                              ),
-                              SizedBox(width: 10.w),
-                              Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text("DR. Engr. Sushil Kumer Paul", style: TextStyle(fontFamily: 'Nun', fontWeight: FontWeight.bold, fontSize: 16.sp),),
-                                  Row(
-                                    children: [
-                                      Container(
-                                        padding: EdgeInsets.only(left: 5.r),
-                                        height: 25.h,
-                                        width: 70.w,
-                                        decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(10.r),
-                                            color: Color(0xffFFFFFF),
-                                            border: Border.all(
-                                                color: Color(0xffD6D6D6),
-                                                width: 2.w
-                                            )
-                                        ),
-                                        child: DropdownButtonHideUnderline(
-                                          child: DropdownButton<String>(
-                                              menuMaxHeight: 200.h,
-                                              iconSize: 15.sp,
-                                              value: selectedItem,
-                                              items: items.map((item) => DropdownMenuItem<String>(
-                                                value: item,
-                                                child: Row(
-                                                  children: [
-                                                    //Image(image: AssetImage('images/icon12.png'),height: 15, width: 15,),
-                                                    SizedBox(width: 10.w),
-                                                    Text(item, style: TextStyle(fontSize: 10.sp, fontWeight: FontWeight.bold,fontFamily: 'Nun', color: Color(0xff494A4B)),)
-                                                  ],
-                                                ),
-
-                                              ) )
-                                                  .toList(),
-                                              onChanged: (items) => setState(() => selectedItem = items,)
-                                          ),
-                                        ),
-                                      ),
-                                      SizedBox(width: 5.h),
-
-                                      Container(
-                                        padding: EdgeInsets.only(left: 5.r),
-                                        height: 25.h,
-                                        width: 90.w,
-                                        decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(10.r),
-                                            color: Color(0xffFFFFFF),
-                                            border: Border.all(
-                                                color: Color(0xffD6D6D6),
-                                                width: 2.w
-                                            )
-                                        ),
-                                        child: DropdownButtonHideUnderline(
-                                          child: DropdownButton<String>(
-                                              menuMaxHeight: 200.h,
-                                              iconSize: 0.sp,
-                                              value: selectedItem1,
-                                              items: items1.map((item) => DropdownMenuItem<String>(
-                                                value: item,
-                                                child: Row(
-                                                  children: [
-                                                    Image(image: AssetImage('images/icon12.png'),height: 15, width: 15,),
-                                                    SizedBox(width: 10.w),
-                                                    Text(item, style: TextStyle(fontSize: 10.sp, fontWeight: FontWeight.bold,fontFamily: 'Nun', color: Color(0xff494A4B)),)
-                                                  ],
-                                                ),
-
-                                              ) )
-                                                  .toList(),
-                                              onChanged: (items) => setState(() => selectedItem1 = items,)
-                                          ),
-                                        ),
-                                      ),
-
-                                      SizedBox(width: 5.w),
-
-                                      Container(
-                                        padding: EdgeInsets.only(left: 5.r),
-                                        height: 25.h,
-                                        width: 70.w,
-                                        decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(10.r),
-                                            color: Color(0xffFFFFFF),
-                                            border: Border.all(
-                                                color: Color(0xffD6D6D6),
-                                                width: 2.w
-                                            )
-                                        ),
-                                        child: DropdownButtonHideUnderline(
-                                          child: DropdownButton<String>(
-                                              menuMaxHeight: 200.h,
-                                              iconSize: 0.sp,
-                                              value: selectedItem2,
-                                              items: items2.map((item) => DropdownMenuItem(
-                                                value: item,
-                                                child: Row(
-                                                  children: [
-                                                    //Image(image: AssetImage('images/icon12.png'),height: 15, width: 15,),
-                                                    //SizedBox(width: size.width*0.01,),
-                                                    Text(item, style: TextStyle(fontSize: 10.sp, fontWeight: FontWeight.bold,fontFamily: 'Nun', color: Color(0xff494A4B)),)
-                                                  ],
-                                                ),
-
-                                              ) )
-                                                  .toList(),
-                                              onChanged: (item) => setState(() => selectedItem2 = item,)
-                                          ),
-                                        ),
-                                      ),
-
-
-
-                                    ],
-                                  )
-                                ],
-                              )
-
-                            ],
+                                SizedBox(height: 15.h,),
+                                Text('আর দুইদিন পর তোমাদের সাথে আমার পরীক্ষা ক্লাস টেস্ট পরীক্ষার প্রস্তুতি নিয়ে এসো যাতে কোনরকম বিলম্ব না হয় পরীক্ষায়।'),
+                                SizedBox(height: 5.h),
+                              ],
+                            ) ,
                           ),
-                          SizedBox(height: 15.h,),
-                          Text('আর দুইদিন পর তোমাদের সাথে আমার পরীক্ষা ক্লাস টেস্ট পরীক্ষার প্রস্তুতি নিয়ে এসো যাতে কোনরকম বিলম্ব না হয় পরীক্ষায়।'),
-                          SizedBox(height: 5.h),
-                          Icon(Icons.favorite_border),
+
+                          Container(
+                            child:Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Icon(Icons.favorite_border),
+                                Row(
+                                  children: [
+                                    Text("249", style:  TextStyle(color: primaryColor,fontSize: 10.sp,),),
+                                    SizedBox(width: 5.w),
+                                    Text("Likes", style:  TextStyle(color: Colors.black,fontSize: 10.sp, ),),
+                                  ],
+                                ),
+                              ],
+                            ) ,
+                          )
+
                           //SizedBox(height: size.height*0.00,),
-                          Row(
-                            children: [
-                              Text("249", style:  TextStyle(color: primaryColor,fontSize: 10.sp,),),
-                              SizedBox(width: 5.w),
-                              Text("Likes", style:  TextStyle(color: Colors.black,fontSize: 10.sp, ),),
-                            ],
-                          ),
+
+
                         ],
                       ),
                     ),

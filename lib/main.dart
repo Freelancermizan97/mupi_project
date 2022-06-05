@@ -28,15 +28,12 @@ class MyApp extends StatelessWidget {
               fontFamily: 'Nun'
           ),
           debugShowCheckedModeBanner: false,
-          home: //Splash_s1(),
-          //HomePage()
-        Login_Page2()
+          home:
+          TeacherProfile()
+         //HomePage()
         //TestFile()
-        //TeacherForm()
-       // StudentForm()
-
         //StudentInfo()
-        //StudentProfile(),
+
       ),
       designSize: const Size(375, 812),
     );
