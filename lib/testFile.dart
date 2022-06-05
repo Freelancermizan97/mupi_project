@@ -1,20 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mupi_project/Information/student_info.dart';
+import 'package:mupi_project/Login%20Page/login_page2.dart';
+import 'package:mupi_project/Profile/teacher_profile.dart';
 import 'package:mupi_project/form/student_form.dart';
 import 'package:mupi_project/form/teacher_form.dart';
+import 'package:mupi_project/home_page.dart';
 import 'package:mupi_project/widgets/textField_widget.dart';
 
-class Login_Page2 extends StatefulWidget {
-  const Login_Page2({Key? key}) : super(key: key);
+
+class TestFile extends StatefulWidget {
+  const TestFile({Key? key}) : super(key: key);
 
   @override
-  _login_Page2State createState() => _login_Page2State();
+  State<TestFile> createState() => _TestFileState();
 }
 
-class _login_Page2State extends State<Login_Page2> {
+class _TestFileState extends State<TestFile> {
+
+
+
+  Color primaryColor = Color(0xff00BFA6);
+
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       backgroundColor: Color(0xffFFFFFF),
       body: SafeArea(
@@ -181,7 +191,7 @@ class _login_Page2State extends State<Login_Page2> {
 
 
               Container(
-                padding: EdgeInsets.only(bottom: 10.r),
+                padding: EdgeInsets.only(bottom: 5.r),
                 child: Column(
                   children: [
                     Container(
@@ -239,5 +249,6 @@ class _login_Page2State extends State<Login_Page2> {
       ),
     );
   }
-
 }
+
+
