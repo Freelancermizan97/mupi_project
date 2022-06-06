@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:mupi_project/Profile/student_profile.dart';
+import 'package:mupi_project/Profile/Student%20Main%20Profile/student_profile.dart';
 
 class StudentProfileEdit extends StatefulWidget {
   const StudentProfileEdit({Key? key}) : super(key: key);

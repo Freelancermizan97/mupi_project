@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mupi_project/Information/student_info.dart';
 import 'package:mupi_project/Information/teacher_info.dart';
+import 'package:mupi_project/Notice/noticePage.dart';
 import 'package:mupi_project/Profile/studentInfo_profile.dart';
-import 'package:mupi_project/Profile/student_profile.dart';
-import 'package:mupi_project/Profile/teacher_profile.dart';
+import 'package:mupi_project/Profile/Student%20Main%20Profile/student_profile.dart';
+import 'package:mupi_project/Profile/Teacher%20Main%20Profile/teacher_profile.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -982,11 +983,16 @@ class _HomePageState extends State<HomePage> {
                                 text2: 'Munshiganj Polytechnic Institute \nhas been discussed in detail here',
                               ),
                               SizedBox(height: 10.h,),
-                              InfoCard(
-                                image: 'images/icon6.png',
-                                text1: 'Notice',
-                                text2: 'The results of the 1st phase supplementary \nexamination of Munshiganj Polytechnic .......',
-                                icon: Icons.add_alert_sharp,
+                              InkWell(
+                                onTap: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context)=>NoticePage()));
+                                },
+                                child: InfoCard(
+                                  image: 'images/icon6.png',
+                                  text1: 'Notice',
+                                  text2: 'The results of the 1st phase supplementary \nexamination of Munshiganj Polytechnic .......',
+                                  icon: Icons.add_alert_sharp,
+                                ),
                               ),
                               SizedBox(height: 10.h,),
                               InkWell(

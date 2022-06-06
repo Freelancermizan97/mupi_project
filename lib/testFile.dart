@@ -3,7 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mupi_project/Information/student_info.dart';
 import 'package:mupi_project/Login%20Page/login_page2.dart';
-import 'package:mupi_project/Profile/teacher_profile.dart';
+import 'package:mupi_project/Profile/Teacher%20Main%20Profile/teacher_profile.dart';
 import 'package:mupi_project/form/student_form.dart';
 import 'package:mupi_project/form/teacher_form.dart';
 import 'package:mupi_project/home_page.dart';
