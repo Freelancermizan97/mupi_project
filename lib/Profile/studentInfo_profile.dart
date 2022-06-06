@@ -256,4 +256,5 @@ class _StudentProfileState extends State<StudentInfoProfile> {
       ],
     );
   }
+
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mupi_project/Profile/studentInfo_profile.dart';
 
 class StudentInfo extends StatefulWidget {
   const StudentInfo({Key? key}) : super(key: key);
@@ -79,10 +80,15 @@ class _StudentInfoState extends State<StudentInfo> {
                               text2: 'Computer Science and Technology, 5th Semester, !st Shift'
                           ),
                           SizedBox(height: 20.h,),
-                          InfoCard(
-                              image: 'images/sayedd.jpg',
-                              text1: 'Abu Sayed',
-                              text2: 'Computer Science and Technology, 5th Semester, !st Shift'
+                          InkWell(
+                            onTap: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>StudentInfoProfile()));
+                            },
+                            child: InfoCard(
+                                image: 'images/sayedd.jpg',
+                                text1: 'Abu Sayed',
+                                text2: 'Computer Science and Technology, 5th Semester, !st Shift'
+                            ),
                           ),
                           SizedBox(height: 20.h,),
                           InfoCard(

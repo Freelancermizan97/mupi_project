@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mupi_project/Profile/teacher_profile.dart';
 
 class TeacherInfo extends StatefulWidget {
   const TeacherInfo({Key? key}) : super(key: key);
@@ -70,16 +71,26 @@ class _TeacherInfoState extends State<TeacherInfo> {
                       Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          InfoCard(
-                              image: '',
-                              text1: 'Dr. Engr. Sushil Kumer Paul',
-                              text2: 'Headmaster of Munshiganj \nPolytechnic Institute'
+                          InkWell(
+                            onTap:(){
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>TeacherProfile()));
+                            },
+                            child: InfoCard(
+                                image: '',
+                                text1: 'Dr. Engr. Sushil Kumer Paul',
+                                text2: 'Headmaster of Munshiganj \nPolytechnic Institute'
+                            ),
                           ),
                           SizedBox(height: 20.h,),
-                          InfoCard(
-                              image: '',
-                              text1: 'Mohammad Alauddin',
-                              text2: 'CI Computer Science and Engineering, Munshiganj Polytechnic Institute ,1st Shift.'
+                          InkWell(
+                            onTap:(){
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>TeacherProfile()));
+                            },
+                            child: InfoCard(
+                                image: '',
+                                text1: 'Mohammad Alauddin',
+                                text2: 'CI Computer Science and Engineering, Munshiganj Polytechnic Institute ,1st Shift.'
+                            ),
                           ),
                           SizedBox(height: 20.h,),
                           InfoCard(

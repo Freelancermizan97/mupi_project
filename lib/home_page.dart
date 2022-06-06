@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mupi_project/Information/student_info.dart';
 import 'package:mupi_project/Information/teacher_info.dart';
 import 'package:mupi_project/Profile/studentInfo_profile.dart';
+import 'package:mupi_project/Profile/student_profile.dart';
 import 'package:mupi_project/Profile/teacher_profile.dart';
 
 
@@ -62,7 +63,7 @@ class _HomePageState extends State<HomePage> {
                             children: [
                               InkWell(
                                 onTap: (){
-                                  Navigator.push(context, MaterialPageRoute(builder: (context)=> StudentInfoProfile()));
+                                  Navigator.push(context, MaterialPageRoute(builder: (context)=> StudentProfile()));
                                 },
                                 child: Container(
                                   decoration: BoxDecoration(

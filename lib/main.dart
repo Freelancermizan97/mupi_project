@@ -31,8 +31,8 @@ class MyApp extends StatelessWidget {
           ),
           debugShowCheckedModeBanner: false,
           home:
-            //Splash_s1()
-          StudentProfile()
+            Splash_s1()
+          //StudentProfile()
         //StudentInfo()
         //TeacherInfo()
           //TeacherProfile()

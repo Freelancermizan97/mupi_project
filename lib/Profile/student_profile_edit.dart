@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:mupi_project/Profile/student_profile_edit.dart';
+import 'package:mupi_project/Profile/student_profile.dart';
 
-class StudentProfile extends StatefulWidget {
-  const StudentProfile({Key? key}) : super(key: key);
+class StudentProfileEdit extends StatefulWidget {
+  const StudentProfileEdit({Key? key}) : super(key: key);
 
   @override
-  State<StudentProfile> createState() => _StudentProfileState();
+  State<StudentProfileEdit> createState() => _StudentProfileEditState();
 }
 
-class _StudentProfileState extends State<StudentProfile> {
+class _StudentProfileEditState extends State<StudentProfileEdit> {
 
   Color primeryColor = Color(0xff00BFA6);
 
@@ -20,7 +20,7 @@ class _StudentProfileState extends State<StudentProfile> {
         child: SafeArea(
           child: Column(
             children: [
-              Padding(
+              Padding (
                 padding: EdgeInsets.only(top: 20.r, left: 20.r, right: 20.r),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -42,14 +42,10 @@ class _StudentProfileState extends State<StudentProfile> {
                     ),
                     InkWell(
                       onTap: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>StudentProfileEdit()));
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>StudentProfile()));
                       },
                       child: Container(
-                        child: Image(
-                          image: AssetImage('images/icon17.png'),
-                          height: 20.h,
-                          width: 20.w,
-                        ),
+                        child: Icon(Icons.save_alt,color: primeryColor,)
                       ),
                     ),
                   ],
@@ -89,21 +85,20 @@ class _StudentProfileState extends State<StudentProfile> {
               ),
               SizedBox(height: 10.h,),
               Text("Abu Sayed", style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.w700),),
-              Text("1st Shift, 4th Semester",style: TextStyle(fontSize: 12.sp, color: Color(0xff494A4B)),),
-              Text("Computer Science and Engineering",style: TextStyle(fontSize: 12.sp, color: Color(0xff494A4B)),),
               SizedBox(height: 40.h,),
 
               infoCard(
-                name: 'Abu Sayed',
-                fatherName: 'Abdul Rouf',
-                motherName: 'Salma',
-                roll: '450216',
-                reg: '15020062615',
-                session: '19-20',
-                religion: 'Muslim',
-                number: '0158***745',
-                location: "jalkuri, Narayanganj",
-                gmail: 'Arshayed017@gmail.com'
+                  name: '',
+                  fatherName: '',
+                  motherName: '',
+                  roll: '',
+                  department: '',
+                  reg: '',
+                  session: '',
+                  religion: '',
+                  number: '',
+                  location: "",
+                  gmail: ''
               )
             ],
           ),
@@ -111,7 +106,7 @@ class _StudentProfileState extends State<StudentProfile> {
       ),
     );
   }
-  Widget infoCard ({name, fatherName, motherName, roll, reg, session, religion, number, gmail, location, }){
+  Widget infoCard ({name, fatherName, motherName, department,roll, reg, session, religion, number, gmail, location, }){
     //Size size = MediaQuery.of(context).size;
     return Column(
       children: [
@@ -123,7 +118,7 @@ class _StudentProfileState extends State<StudentProfile> {
           padding: EdgeInsets.only(left: 15..r),
           child: Row(
             children: [
-              Text('Name: ', style: TextStyle(fontSize: 16.sp),),
+              Text('Enter Your Name: ', style: TextStyle(fontSize: 14.sp, color: Color(0xffB6B7B7)),),
               Text(name, style: TextStyle(fontSize: 16.sp, color: primeryColor),),
             ],
           ),
@@ -137,8 +132,8 @@ class _StudentProfileState extends State<StudentProfile> {
           padding: EdgeInsets.only(left: 15.r),
           child: Row(
             children: [
-              Text('Father name: ', style: TextStyle(fontSize: 16.sp),),
-              Text(fatherName, style: TextStyle(fontSize: 16.sp, color: primeryColor),),
+              Text('Father name: ', style: TextStyle(fontSize: 14.sp,color: Color(0xffB6B7B7)),),
+              Text(department, style: TextStyle(fontSize: 16.sp, color: primeryColor),),
             ],
           ),
         ),
@@ -151,12 +146,11 @@ class _StudentProfileState extends State<StudentProfile> {
           padding: EdgeInsets.only(left: 15.r),
           child: Row(
             children: [
-              Text('Mother name: ', style: TextStyle(fontSize: 16.sp),),
+              Text('Mother name: ', style: TextStyle(fontSize: 14.sp,color: Color(0xffB6B7B7)),),
               Text(motherName, style: TextStyle(fontSize: 16.sp, color: primeryColor),),
             ],
           ),
         ),
-        SizedBox(height: 8.h),
         Divider(
           height: 2.h,
         ),
@@ -165,12 +159,68 @@ class _StudentProfileState extends State<StudentProfile> {
           padding: EdgeInsets.only(left: 15.r),
           child: Row(
             children: [
-              Text('Roll No: ', style: TextStyle(fontSize: 16.sp),),
-              Text(roll, style: TextStyle(fontSize: 16.sp, color: primeryColor),),
+              Text('Department: ', style: TextStyle(fontSize: 16.sp,color: Color(0xffB6B7B7)),),
+              Text(session, style: TextStyle(fontSize: 16.sp, color: primeryColor),),
             ],
           ),
         ),
+
         SizedBox(height: 8.h),
+        Divider(
+          height: 2.h,
+        ),
+        SizedBox(height: 1.h),
+        Padding(
+          padding: EdgeInsets.only(left: 1.r),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                height: 50.h,
+                width: 120.w,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10.r),
+                    border: Border.all(
+                        width: 1.w,
+                        color: Color(0xffC6C6C6)
+                    )
+                ),
+                child: Center(
+                  child: Text('Bord Roll', style: TextStyle(fontSize: 13.sp,color: Color(0xffB6B7B7)),),
+                ),
+              ),
+              Container(
+                height: 50.h,
+                width: 100.w,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10.r),
+                    border: Border.all(
+                        width: 1.w,
+                        color: Color(0xffC6C6C6)
+                    )
+                ),
+                child: Center(
+                  child: Text('Shift', style: TextStyle(fontSize: 13.sp,color: Color(0xffB6B7B7)),),
+                ),
+              ),
+              Container(
+                height: 50.h,
+                width: 120.w,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10.r),
+                    border: Border.all(
+                        width: 1.w,
+                        color: Color(0xffC6C6C6)
+                    )
+                ),
+                child: Center(
+                  child: Text('Semester', style: TextStyle(fontSize: 13.sp,color: Color(0xffB6B7B7)),),
+                ),
+              ),
+            ],
+          ),
+        ),
+        SizedBox(height: 1.h),
         Divider(
           height: 2.h,
         ),
@@ -179,7 +229,7 @@ class _StudentProfileState extends State<StudentProfile> {
           padding: EdgeInsets.only(left: 15.r),
           child: Row(
             children: [
-              Text('Reg No: ', style: TextStyle(fontSize: 16.sp),),
+              Text('Reg No: ', style: TextStyle(fontSize: 16.sp,color: Color(0xffB6B7B7)),),
               Text(reg, style: TextStyle(fontSize: 16.sp, color: primeryColor),),
             ],
           ),
@@ -193,7 +243,7 @@ class _StudentProfileState extends State<StudentProfile> {
           padding: EdgeInsets.only(left: 15.r),
           child: Row(
             children: [
-              Text('Session: ', style: TextStyle(fontSize: 16.sp),),
+              Text('Session: ', style: TextStyle(fontSize: 16.sp,color: Color(0xffB6B7B7)),),
               Text(session, style: TextStyle(fontSize: 16.sp, color: primeryColor),),
             ],
           ),
@@ -207,7 +257,7 @@ class _StudentProfileState extends State<StudentProfile> {
           padding: EdgeInsets.only(left: 15.r),
           child: Row(
             children: [
-              Text('Religion: ', style: TextStyle(fontSize: 16.sp),),
+              Text('Religion: ', style: TextStyle(fontSize: 16.sp,color: Color(0xffB6B7B7)),),
               Text(religion, style: TextStyle(fontSize: 16.sp, color: primeryColor),),
             ],
           ),
@@ -221,7 +271,7 @@ class _StudentProfileState extends State<StudentProfile> {
           padding: EdgeInsets.only(left: 15.r),
           child: Row(
             children: [
-              Text('Number: ', style: TextStyle(fontSize: 16.sp),),
+              Text('Number: ', style: TextStyle(fontSize: 16.sp,color: Color(0xffB6B7B7)),),
               Text(number, style: TextStyle(fontSize: 16.sp,color: primeryColor),),
             ],
           ),
@@ -235,7 +285,7 @@ class _StudentProfileState extends State<StudentProfile> {
           padding: EdgeInsets.only(left: 15.r),
           child: Row(
             children: [
-              Text('Gmail: ', style: TextStyle(fontSize: 16.sp),),
+              Text('Gmail: ', style: TextStyle(fontSize: 16.sp,color: Color(0xffB6B7B7)),),
               Text(gmail, style: TextStyle(fontSize: 16.sp, color: primeryColor),),
             ],
           ),
@@ -249,7 +299,7 @@ class _StudentProfileState extends State<StudentProfile> {
           padding: EdgeInsets.only(left: 15.r),
           child: Row(
             children: [
-              Text('Location: ', style: TextStyle(fontSize: 16.sp),),
+              Text('Location: ', style: TextStyle(fontSize: 16.sp,color: Color(0xffB6B7B7) ),),
               Text(location, style: TextStyle(fontSize: 16.sp, color: primeryColor),),
             ],
           ),
