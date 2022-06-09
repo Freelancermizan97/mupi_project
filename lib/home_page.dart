@@ -6,6 +6,7 @@ import 'package:mupi_project/Notice/noticePage.dart';
 import 'package:mupi_project/Profile/studentInfo_profile.dart';
 import 'package:mupi_project/Profile/Student%20Main%20Profile/student_profile.dart';
 import 'package:mupi_project/Profile/Teacher%20Main%20Profile/teacher_profile.dart';
+import 'package:mupi_project/Suggesion/suggestion_page.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -921,7 +922,19 @@ class _HomePageState extends State<HomePage> {
                     Text('Suggestions Question', style: TextStyle(fontFamily: 'Nun'),),
 
                     SizedBox(height: 10.h,),
+                    
+                    InkWell(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>SuggestinoPage1()));
+                      },
+                      child: SuggestionCard(
+                        image: 'images/icon4.png',
+                        text1: 'Suggestions questions',
+                        text2: 'Very short, short, easy',
 
+                      ),
+                    ),
+/*
                     SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       physics: BouncingScrollPhysics(),
@@ -934,32 +947,17 @@ class _HomePageState extends State<HomePage> {
                                 image: 'images/icon4.png',
                                 text1: 'Suggestions questions',
                                 text2: 'Very short, short, easy',
-                                text3: 'Computer Science and Engineering',
-                                text4: '2nd'
-                            ),
-                            SizedBox(width: 10.w,),
-                            SuggestionCard(
-                                image: 'images/icon14.png',
-                                text1: 'Board Questions',
-                                text2: 'Very Short, easy',
-                                text3: 'Computer Science and Engineering',
-                                text4: '2nd'
+
                             ),
 
-                            SizedBox(width: 10.w,),
-                            SuggestionCard(
-                                image: 'images/icon14.png',
-                                text1: 'Board Questions',
-                                text2: 'Very Short, easy',
-                                text3: 'Computer Science and Engineering',
-                                text4: '2nd'
-                            ),
 
                           ],
                         ),
                       ),
                     ),
+*/
 
+                  
                     SizedBox(height: 10.h,),
 
                     Text('More Information', style: TextStyle(fontFamily: 'Nun'),),
@@ -1053,12 +1051,12 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Widget SuggestionCard ({image, text1, text2, text3, text4 }){
+  Widget SuggestionCard ({image, text1, text2,  }){
 
     return Container(
       padding: EdgeInsets.only(left: 20.r, top: 5.r, bottom: 5.r, right: 10.r),
       height: 90.h,
-      width: 300.w,
+      width: MediaQuery.of(context).size.width.w,
       decoration: BoxDecoration(
           color: Color(0xffFBFBFB),
           borderRadius: BorderRadius.circular(15.r),
@@ -1082,7 +1080,7 @@ class _HomePageState extends State<HomePage> {
 
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.start,
 
         children: [
           Container(
@@ -1100,18 +1098,13 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     Text(text1, style: TextStyle(fontFamily: 'Nun', fontSize: 15.sp),),
                     Text(text2, style: TextStyle(fontFamily: 'Nun', fontSize: 12.sp, color: Colors.grey[500]),),
-                    Text(text3, style: TextStyle(fontFamily: 'Nun', fontSize: 10.sp, color: Colors.grey[500]),),
+
                   ],
                 ),
               ],
             ),
           ),
-          Container(
-            child: Text(
-              text4,
-              style: TextStyle(fontFamily: 'Nun', color: primaryColor, fontWeight: FontWeight.bold, fontSize: 10.sp),
-            ),
-          )
+
 
 
         ],

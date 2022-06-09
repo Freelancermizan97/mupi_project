@@ -32,20 +32,26 @@ class _TeacherProfileState extends State<TeacherProfile> {
           child: Padding(
             padding: EdgeInsets.only(left:20.r, right: 20.r, ),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                InkWell(
-                  onTap: (){
-                    Navigator.pop(context);
-                  },
-                  child: Container(
-                    padding: EdgeInsets.only(top: 15.r, bottom: 10.r),
-                    child: Icon(
-                      Icons.arrow_back,
-                      size: 20.sp,
+                Row(
+                  children: [
+                    InkWell(
+                      onTap: (){
+                        Navigator.pop(context);
+                      },
+                      child: Container(
+                        padding: EdgeInsets.only(top: 15.r, bottom: 10.r),
+                        child: Icon(
+                          Icons.arrow_back,
+                          size: 20.sp,
+                        ),
+                      ),
                     ),
-                  ),
+                  ],
                 ),
+                
+                
                 Container(
                   decoration: BoxDecoration(
                       color: Colors.grey[200],
@@ -81,6 +87,16 @@ class _TeacherProfileState extends State<TeacherProfile> {
                 Text('Mirkadim, Munshiganj', style: TextStyle(color: Colors.grey[500]),),
                 SizedBox(height: 10.h),
                 Container(
+                  height: 35.h,
+                    width: 80.w,
+                    decoration: BoxDecoration(
+                      color: primeryColor,
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Center(child: Text('Post\'s', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 16.sp),))
+                ),
+                /*
+                Container(
                   height: 30.h,
                   width: 80.w,
                   decoration: BoxDecoration(
@@ -91,6 +107,10 @@ class _TeacherProfileState extends State<TeacherProfile> {
                     child: Text('Edit Profile', style: TextStyle(color: Colors.white, fontSize: 13.sp, fontWeight: FontWeight.w800),),
                   ),
                 ),
+
+                
+                
+                
                 SizedBox(height: 10.h,),
                 Container(
                   height: 120,
@@ -108,7 +128,7 @@ class _TeacherProfileState extends State<TeacherProfile> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text('Post', style: TextStyle(fontWeight: FontWeight.w900, fontSize: 16.sp),),
-                        SizedBox(height: 5.h),
+                        SizedBox(height: 8.h),
                         Row(
                           children: [
                             Container(
@@ -170,6 +190,8 @@ class _TeacherProfileState extends State<TeacherProfile> {
                     ),
                   ),
                 ),
+
+                */
                 SizedBox(height: 10.h),
                 Container (
                   padding: EdgeInsets.only(top: 10.r),

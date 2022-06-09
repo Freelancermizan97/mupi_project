@@ -77,7 +77,7 @@ class _StudentInfoState extends State<StudentInfo> {
                           InfoCard(
                               image: 'images/mizan.jpg',
                               text1: 'MD. Mizan Hossen',
-                              text2: 'Computer Science and Technology, 5th Semester, !st Shift'
+                              text2: 'Computer Science and Technology, 5th Semester, 1st Shift'
                           ),
                           SizedBox(height: 20.h,),
                           InkWell(
@@ -87,38 +87,38 @@ class _StudentInfoState extends State<StudentInfo> {
                             child: InfoCard(
                                 image: 'images/sayedd.jpg',
                                 text1: 'Abu Sayed',
-                                text2: 'Computer Science and Technology, 5th Semester, !st Shift'
+                                text2: 'Computer Science and Technology, 5th Semester, 1st Shift'
                             ),
                           ),
                           SizedBox(height: 20.h,),
                           InfoCard(
                               image: 'images/Zunaed2.jpg',
                               text1: 'Zunaed Ibne Faruk',
-                              text2: 'Computer Science and Technology, 5th Semester, !st Shift'
+                              text2: 'Computer Science and Technology, 5th Semester, 1st Shift'
                           ),
                           SizedBox(height: 20.h,),
                           InfoCard(
                               image: 'images/mizan.jpg',
                               text1: 'MD. Mizan Hossen',
-                              text2: 'Computer Science and Technology,5th Semester, !st Shift'
+                              text2: 'Computer Science and Technology,5th Semester, 1st Shift'
                           ),
                           SizedBox(height: 20.h,),
                           InfoCard(
                               image: 'images/mizan.jpg',
                               text1: 'MD. Mizan Hossen',
-                              text2: 'Computer Science and Technology, 5th Semester, !st Shift'
+                              text2: 'Computer Science and Technology, 5th Semester, 1st Shift'
                           ),
                           SizedBox(height: 20.h,),
                           InfoCard(
                               image: 'images/sayedd.jpg',
                               text1: 'Abu Sayed',
-                              text2: 'Computer Science and Technology, 5th Semester, !st Shift'
+                              text2: 'Computer Science and Technology, 5th Semester, 1st Shift'
                           ),
                           SizedBox(height: 20.h,),
                           InfoCard(
                               image: 'images/Zunaed2.jpg',
                               text1: 'Zunaed Ibne Faruk',
-                              text2: 'Computer Science and Technology, 5th Semester, !st Shift'
+                              text2: 'Computer Science and Technology, 5th Semester, 1st Shift'
                           ),
                           SizedBox(height: 20.h,),
                         ],
