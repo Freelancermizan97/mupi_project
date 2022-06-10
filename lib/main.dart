@@ -10,17 +10,18 @@ import 'package:mupi_project/MUPI%20Info/mupi_info_3.dart';
 import 'package:mupi_project/MUPI%20Info/mupi_info_4.dart';
 import 'package:mupi_project/MUPI%20Info/mupi_info_5.dart';
 import 'package:mupi_project/MUPI%20Info/mupi_info_6.dart';
+import 'package:mupi_project/Note/note_page1.dart';
 import 'package:mupi_project/Notice/noticePage.dart';
 import 'package:mupi_project/Notice/notice_page2.dart';
 import 'package:mupi_project/Profile/studentInfo_profile.dart';
 import 'package:mupi_project/Profile/Student%20Main%20Profile/student_profile.dart';
 import 'package:mupi_project/Profile/Teacher%20Main%20Profile/teacher_profile.dart';
+import 'package:mupi_project/Profile/teacherInfo_profile.dart';
 import 'package:mupi_project/Splash_Screen/splash_s1.dart';
 import 'package:mupi_project/Suggesion/suggestion_page.dart';
 import 'package:mupi_project/Suggesion/suggestion_page2.dart';
 import 'package:mupi_project/Suggesion/suggestion_page3.dart';
-import 'package:mupi_project/Suggesion/suggestion_page_s4.dart';
-import 'package:mupi_project/Suggesion/suggestion_page_s5.dart';
+
 import 'package:mupi_project/form/student_form.dart';
 import 'package:mupi_project/form/teacher_form.dart';
 import 'package:mupi_project/home_page.dart';
@@ -44,7 +45,10 @@ class MyApp extends StatelessWidget {
           ),
           debugShowCheckedModeBanner: false,
           home:
-            //Splash_s1()
+            Splash_s1()
+       // SuggestionPageS4()
+        //TeacherInfoProfile()
+        //NotePage1()
         //SuggestionPageS5()
         //MUPIInfo1()
         //NoticePage()
@@ -53,7 +57,7 @@ class MyApp extends StatelessWidget {
         //StudentInfo()
         //TeacherInfo()
           //TeacherProfile()
-         HomePage()
+         //HomePage()
         //TestFile()
         //StudentInfo()
 

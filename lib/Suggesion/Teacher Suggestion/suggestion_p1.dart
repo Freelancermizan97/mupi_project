@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:mupi_project/Suggesion/suggestion_page2.dart';
+import 'package:mupi_project/Suggesion/Teacher%20Suggestion/suggestion_t2.dart';
 
-class SuggestinoPage1 extends StatefulWidget {
-  const SuggestinoPage1({Key? key}) : super(key: key);
+
+class SuggestionT1 extends StatefulWidget {
+  const SuggestionT1({Key? key}) : super(key: key);
 
   @override
-  State<SuggestinoPage1> createState() => _SuggestinoPage1State();
+  State<SuggestionT1> createState() => _SuggestionT1State();
 }
 
-class _SuggestinoPage1State extends State<SuggestinoPage1> {
+class _SuggestionT1State extends State<SuggestionT1> {
   @override
 
   Widget SuggestionCard ({image, text1 }){
@@ -44,9 +45,9 @@ class _SuggestinoPage1State extends State<SuggestinoPage1> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
-            child: Center(
-              child: Text(text1, style: TextStyle(fontFamily: 'Nun', fontSize: 15.sp),),
-            )
+              child: Center(
+                child: Text(text1, style: TextStyle(fontFamily: 'Nun', fontSize: 15.sp),),
+              )
           ),
 
 
@@ -76,7 +77,7 @@ class _SuggestinoPage1State extends State<SuggestinoPage1> {
 
               InkWell(
                 onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> SuggestionPage2()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> SuggestionT2()));
                 },
                 child: SuggestionCard(
                     text1: '1st'
@@ -86,7 +87,7 @@ class _SuggestinoPage1State extends State<SuggestinoPage1> {
 
               InkWell(
                 onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> SuggestionPage2()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> SuggestionT2()));
                 },
                 child: SuggestionCard(
                     text1: '2nd'
@@ -96,7 +97,7 @@ class _SuggestinoPage1State extends State<SuggestinoPage1> {
 
               InkWell(
                 onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> SuggestionPage2()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> SuggestionT2()));
                 },
                 child: SuggestionCard(
                     text1: '3rd'
@@ -106,7 +107,7 @@ class _SuggestinoPage1State extends State<SuggestinoPage1> {
 
               InkWell(
                 onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> SuggestionPage2()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> SuggestionT2()));
                 },
                 child: SuggestionCard(
                     text1: '4th'
@@ -116,7 +117,7 @@ class _SuggestinoPage1State extends State<SuggestinoPage1> {
 
               InkWell(
                 onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> SuggestionPage2()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> SuggestionT2()));
                 },
                 child: SuggestionCard(
                     text1: '5th'
@@ -126,7 +127,7 @@ class _SuggestinoPage1State extends State<SuggestinoPage1> {
 
               InkWell(
                 onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> SuggestionPage2()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> SuggestionT2()));
                 },
                 child: SuggestionCard(
                     text1: '6th'
@@ -136,7 +137,7 @@ class _SuggestinoPage1State extends State<SuggestinoPage1> {
 
               InkWell(
                 onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> SuggestionPage2()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> SuggestionT2()));
                 },
                 child: SuggestionCard(
                     text1: '7th'
@@ -146,7 +147,7 @@ class _SuggestinoPage1State extends State<SuggestinoPage1> {
 
               InkWell(
                 onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> SuggestionPage2()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> SuggestionT2()));
                 },
                 child: SuggestionCard(
                     text1: '8th'

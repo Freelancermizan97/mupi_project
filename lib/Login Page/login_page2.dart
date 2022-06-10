@@ -19,24 +19,20 @@ class _login_Page2State extends State<Login_Page2> {
       backgroundColor: Color(0xffFFFFFF),
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.only(left: 20.r, top: 10.r, right: 20.r),
+          padding: EdgeInsets.only(left: 20.r, top: 0.r, right: 20.r),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.center,
             //crossAxisAlignment: CrossAxisAlignment.start,
             children: [
 
               Container(
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text('Tell Us Abuot You', style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20.sp, color: Color(0xff000000)),),
+
                     Padding(
-                      padding: EdgeInsets.only(top: 8.r),
-                      child: Text('This is how teacher & student on Teachmint will get to khow you', style: TextStyle( fontSize: 14.sp, fontFamily: 'Nun', color: Color(0xff687A7D)),),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(top: 15.r),
-                      child: Text('You are a', style: TextStyle( fontSize: 17.sp, fontFamily: 'Nun', color: Color(0xff000000)),),
+                      padding: EdgeInsets.only(top: 15.r, bottom: 30),
+                      child: Text('You are a', style: TextStyle( fontSize: 20.sp, fontFamily: 'Nun', color: Color(0xff000000)),),
                     ),
 
                     Row(
@@ -119,116 +115,15 @@ class _login_Page2State extends State<Login_Page2> {
                       ],
                     ),
 
-                    Text('Name', style: TextStyle(fontFamily: 'Nun', fontSize: 16.sp, color: Color(0xff3D3D3D)),),
 
-                    SizedBox(height: 10.h),
 
-                    textFieldCustom(
-                        size1: 50.h,
-                        size2: MediaQuery.of(context).size.width.w,
-                        text: "Enter your name  :"
-                    ),
 
-                    SizedBox(height: 5.h),
-
-                    Row(
-                      children: [
-                        textFieldCustom(
-                            size1: 50.h,
-                            size2: 200.w,
-                            text: '+880 01'
-                        ),
-
-                        SizedBox(width: 10.w),
-                        textFieldCustom(
-                            size1: 50.h,
-                            size2: 120.w,
-                            text: 'Blood group'
-                        ),
-
-                      ],
-                    ),
-
-                    SizedBox(height: 10.h),
-
-                    textFieldCustom(
-                        size1: 50.h,
-                        size2: MediaQuery.of(context).size.width.w,
-                        text: 'Gmail :'
-                    ),
-                    SizedBox(height: 20.h,),
-
-                    Row(
-                      children: [
-                        Container(
-                          height:80.h,
-                          width: 80.w,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15),
-                            color: Color(0xffF4F4F4),
-                          ),
-
-                        ),
-                        SizedBox(width: 20,),
-                        Text('Add profile picture', style: TextStyle(fontSize: 15, color: Color(0xff00BFA6), fontFamily: 'Nun' ),),
-                        SizedBox(width: 6,),
-                        Icon(Icons.arrow_forward, color: Color(0xff00BFA6),),
-                      ],
-                    ),
                   ],
                 ),
               ),
 
 
-              Container(
-                padding: EdgeInsets.only(bottom: 10.r),
-                child: Column(
-                  children: [
-                    Container(
-                      padding: EdgeInsets.only(left: 10.r, top: 5.r, ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                              child: Row(
-                                children: [
-                                  Text('Gate importance update on ', style: TextStyle(fontFamily: 'Nun', color: Color(0xffB0B0B0), fontSize: 14.sp),),
-                                  Text('MUPI group', style: TextStyle(fontFamily: 'Nun', color: Color(0xff00BFA6)),),
-                                ],
-                              )),
 
-
-                          Container(
-                            height: 10,
-                            child:Switch(
-                              onChanged: (isEnable){},
-                              value: true,
-                              activeColor: Color(0xff00BFA6),
-                            ) ,
-                          )
-                        ],
-                      ),
-                    ),
-                    SizedBox(height: 10.h,),
-                    InkWell(
-                      onTap: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=> StudentForm()));
-                      },
-                      child: Container(
-                          height: 50.h,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20.r),
-                            color: Color(0xff00BFA6),
-
-                          ),
-                          child: Center(
-                            child: Text('Continue', style: TextStyle(fontFamily: 'Nun', color: Colors.white, fontSize: 18.sp, fontWeight: FontWeight.w800),),
-                          )
-                      ),
-                    ),
-                  ],
-                ),
-              )
 
 
 

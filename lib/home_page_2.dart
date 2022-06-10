@@ -4,24 +4,24 @@ import 'package:mupi_project/Information/student_info.dart';
 import 'package:mupi_project/Information/teacher_info.dart';
 import 'package:mupi_project/MUPI%20Info/mupi_info_1.dart';
 import 'package:mupi_project/Note/note_page1.dart';
+import 'package:mupi_project/Note/note_page_t1.dart';
 import 'package:mupi_project/Notice/noticePage.dart';
 import 'package:mupi_project/Profile/Student%20Main%20Profile/student_profile.dart';
 import 'package:mupi_project/Profile/Teacher%20Main%20Profile/teacher_profile.dart';
 import 'package:mupi_project/Profile/teacherInfo_profile.dart';
 import 'package:mupi_project/Result/result_page1.dart';
 import 'package:mupi_project/Routine/routine_page1.dart';
+import 'package:mupi_project/Suggesion/Teacher%20Suggestion/suggestion_p1.dart';
 import 'package:mupi_project/Suggesion/suggestion_page.dart';
 
-
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class HomePage2 extends StatefulWidget {
+  const HomePage2({Key? key}) : super(key: key);
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<HomePage2> createState() => _HomePage2State();
 }
 
-class _HomePageState extends State<HomePage> {
-
+class _HomePage2State extends State<HomePage2> {
   final List<String> items = ['All','CST', 'CT','ET', 'EEE', 'IPCT', 'RAC', 'EMT'];
   String? selectedItem = 'All';
 
@@ -69,7 +69,7 @@ class _HomePageState extends State<HomePage> {
                             children: [
                               InkWell(
                                 onTap: (){
-                                  Navigator.push(context, MaterialPageRoute(builder: (context)=> StudentProfile()));
+                                  Navigator.push(context, MaterialPageRoute(builder: (context)=> TeacherProfile()));
                                 },
                                 child: Container(
                                   decoration: BoxDecoration(
@@ -95,10 +95,11 @@ class _HomePageState extends State<HomePage> {
                                   ),
                                   child:  CircleAvatar(
                                       backgroundColor: Color(0xffF4F4F4),
-                                      radius: 15.r ,
+                                      radius: 20.r ,
                                       child: CircleAvatar(
+                                        backgroundColor: Color(0xffF4F4F4),
                                         radius: 15.r,
-                                        backgroundImage: AssetImage('images/sayedd.jpg'),
+                                        backgroundImage: AssetImage(''),
                                       )
                                   ),
                                 ),
@@ -1007,13 +1008,13 @@ class _HomePageState extends State<HomePage> {
                           children: [
 
                             InkWell(
-                            onTap: (){
-                              Navigator.push(context, MaterialPageRoute(builder: (context)=>SuggestinoPage1()));
+                              onTap: (){
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>SuggestionT1()));
                               },
                               child: SuggestionCard(
-                                  image: 'images/icon19.png',
-                                  text1: 'Suggestions questions',
-                                  text2: 'Very short, short, easy',
+                                image: 'images/icon19.png',
+                                text1: 'Suggestions questions',
+                                text2: 'Very short, short, easy',
 
                               ),
                             ),
@@ -1037,7 +1038,7 @@ class _HomePageState extends State<HomePage> {
                     ),
 
 
-                  
+
                     SizedBox(height: 10.h,),
 
                     Text('More Information', style: TextStyle(fontFamily: 'Nun', fontSize: 15.sp),),
@@ -1116,11 +1117,11 @@ class _HomePageState extends State<HomePage> {
                               SizedBox(height: 10.h),
                               InkWell(
                                 onTap: (){
-                                  Navigator.push(context, MaterialPageRoute(builder: (context)=>NotePage1()));
+                                  Navigator.push(context, MaterialPageRoute(builder: (context)=>NotePageT1()));
                                 },
                                 child: InfoCard(
                                   image: 'images/icon15.png',
-                                  text1: 'Student Note',
+                                  text1: 'Teacher\'s Note',
                                   text2: 'You can make all the note here',
 
                                 ),
@@ -1269,5 +1270,4 @@ class _HomePageState extends State<HomePage> {
 
 
 }
-
 

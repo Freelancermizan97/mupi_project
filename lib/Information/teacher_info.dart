@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mupi_project/Profile/Teacher%20Main%20Profile/teacher_profile.dart';
+import 'package:mupi_project/Profile/teacherInfo_profile.dart';
 
 class TeacherInfo extends StatefulWidget {
   const TeacherInfo({Key? key}) : super(key: key);
@@ -73,7 +74,7 @@ class _TeacherInfoState extends State<TeacherInfo> {
                         children: [
                           InkWell(
                             onTap:(){
-                              Navigator.push(context, MaterialPageRoute(builder: (context)=>TeacherProfile()));
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>TeacherInfoProfile()));
                             },
                             child: InfoCard(
                                 image: '',
@@ -84,7 +85,7 @@ class _TeacherInfoState extends State<TeacherInfo> {
                           SizedBox(height: 20.h,),
                           InkWell(
                             onTap:(){
-                              Navigator.push(context, MaterialPageRoute(builder: (context)=>TeacherProfile()));
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>TeacherInfoProfile()));
                             },
                             child: InfoCard(
                                 image: '',

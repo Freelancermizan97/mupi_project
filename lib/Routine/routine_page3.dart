@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class SuggestionPageS4 extends StatefulWidget {
-  const SuggestionPageS4({Key? key}) : super(key: key);
+class RoutinePage3 extends StatefulWidget {
+  const RoutinePage3({Key? key}) : super(key: key);
 
   @override
-  State<SuggestionPageS4> createState() => _SuggestionPageS4State();
+  State<RoutinePage3> createState() => _RoutinePage3State();
 }
 
-class _SuggestionPageS4State extends State<SuggestionPageS4> {
+class _RoutinePage3State extends State<RoutinePage3> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,107 +16,66 @@ class _SuggestionPageS4State extends State<SuggestionPageS4> {
       body: SingleChildScrollView(
         child: SafeArea(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Padding(
                 padding: EdgeInsets.all(20.r),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text("Suggestions Section", style: TextStyle(fontSize: 20.sp, color: Color(0xff000000)),),
+                    Text("Class Routine", style: TextStyle(fontSize: 20.sp, color: Color(0xff000000)),),
                     Text("Munshiganj Polytechnic Institute", style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w700, color: Color(0xff494A4B)),),
 
                     SizedBox(height: 10.h,),
 
 
-                    Container(
-                      padding: EdgeInsets.only(left: 20.r, top: 5.r, bottom: 5.r, right: 10.r),
-                      height: 100.h,
-                      width: MediaQuery.of(context).size.width.w,
-                      decoration: BoxDecoration(
-                          color: Color(0xffFBFBFB),
-                          borderRadius: BorderRadius.circular(15.r),
-                          boxShadow: [
-                            //bottom right shadow is darker shadow
-                            BoxShadow(
-                                color: Colors.grey.shade300,
-                                offset: const Offset(4, 4),
-                                blurRadius: 5,
-                                spreadRadius: 2
-                            ),
-                            //top left shaow lighter
-                            const BoxShadow(
-                              color: Colors.white,
-                              offset: Offset(-5, -5),
-                              blurRadius: 15,
-                              spreadRadius: 1,
-                            ),
-                          ]
-
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Container(
-                            decoration: BoxDecoration(
-                                color: Colors.grey[200],
-                                borderRadius: BorderRadius.circular(120.r),
-                                boxShadow: [
-                                  //bottom right shadow is darker shadow
-                                  BoxShadow(
-                                      color: Colors.grey.shade400,
-                                      offset: const Offset(4, 4),
-                                      blurRadius: 15,
-                                      spreadRadius: 1
-                                  ),
-
-                                  const BoxShadow(
-                                    color: Colors.white,
-                                    offset: Offset(-5, -5),
-                                    blurRadius: 15,
-                                    spreadRadius: 1,
-                                  ),
-                                ]
-                            ),
-                            child:  CircleAvatar(
-                              backgroundColor: Color(0xffFBFBFB),
-                              radius: 30 .r ,
-                            ),
-                          ),
-                          SizedBox(width: 10.w,),
-                          Container(
-                            padding: EdgeInsets.all(5.r),
-                            height: 35.h,
-                            width: 200.w,
-                            decoration: BoxDecoration(
-                              boxShadow: [
-                                BoxShadow(
-                                    color: Colors.grey.shade300,
-                                    offset: const Offset(4, 4),
-                                    blurRadius: 15,
-                                    spreadRadius: 1
-                                ),
-                              ],
-                                borderRadius: BorderRadius.circular(10),
-                                color: Color(0xffFFFFFF),
-
-                            ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-
-                                Center(child: Text('Post your suggestion...', style: TextStyle(color: Color(0xff494A4B)),))
-                              ],
-                            ),
-                          )
-
-
-              ],
-            ),
-          )
-
-
                   ],
                 ),
               ),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    height: 35.h,
+                    width: 100.w,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.r),
+                      border: Border.all(
+                        width: 1.w,
+                        color: Colors.grey
+                      )
+                    ),
+                    child: Center(
+                      child: Text('1\'s Shift'),
+                    ),
+                  ),
+                ],
+              ),
+              Image(image: AssetImage('images/routine1.png')),
+              SizedBox(height: 15.h,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    height: 35.h,
+                    width: 100.w,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10.r),
+                        border: Border.all(
+                            width: 1.w,
+                            color: Colors.grey
+                        )
+                    ),
+                    child: Center(
+                      child: Text('2nd Shift'),
+                    ),
+                  ),
+                ],
+              ),
+              Image(image: AssetImage('images/routine1.png')),
+
+              /*
               Container(
                 padding: EdgeInsets.all(20.r),
                 decoration: BoxDecoration(
@@ -270,6 +229,8 @@ class _SuggestionPageS4State extends State<SuggestionPageS4> {
                   ],
                 ),
               ),
+              */
+
             ],
           ),
         ),

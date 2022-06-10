@@ -1,18 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:mupi_project/Profile/Teacher%20Main%20Profile/teacher_post.dart';
-import 'package:mupi_project/Profile/Teacher%20Main%20Profile/teacher_profile_edit.dart';
-import 'package:mupi_project/home_page_2.dart';
+import 'package:mupi_project/Profile/teacherInfo_profile.dart';
 
-class TeacherProfile extends StatefulWidget {
-  const TeacherProfile({Key? key}) : super(key: key);
+class TeacherInfoProfile extends StatefulWidget {
+  const TeacherInfoProfile({Key? key}) : super(key: key);
 
   @override
-  State<TeacherProfile> createState() => _TeacherProfileState(); 
+  State<TeacherInfoProfile> createState() => _TeacherInfoProfileState();
 }
 
-class _TeacherProfileState extends State<TeacherProfile> {
-
+class _TeacherInfoProfileState extends State<TeacherInfoProfile> {
   final List<String> items = ['All','CST', 'CT','ET', 'EEE', 'IPCT', 'RAC', 'EMT'];
   String? selectedItem = 'All';
 
@@ -40,7 +37,7 @@ class _TeacherProfileState extends State<TeacherProfile> {
                   children: [
                     InkWell(
                       onTap: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage2()));
+                        Navigator.pop(context);
                       },
                       child: Container(
                         padding: EdgeInsets.only(top: 15.r, bottom: 10.r),
@@ -85,32 +82,33 @@ class _TeacherProfileState extends State<TeacherProfile> {
                 Text('+8801689517629', style: TextStyle(color: Colors.grey[500]),),
                 Text('BBA, BAC, PHD in Mesign Learning', style: TextStyle(color: Colors.grey[500]),),
                 Text('Mirkadim, Munshiganj', style: TextStyle(color: Colors.grey[500]),),
-                SizedBox(height: 20.h),
-                
-                
-                
-                
-                InkWell(
-                  onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>TeacherProfileEdit()));
-                  },
-                  child: Container(
-                    height: 30.h,
+                SizedBox(height: 10.h),
+                Container(
+                    height: 35.h,
                     width: 80.w,
                     decoration: BoxDecoration(
-                        color: primeryColor,
-                        borderRadius: BorderRadius.circular(10.r)
+                      color: primeryColor,
+                      borderRadius: BorderRadius.circular(20),
                     ),
-                    child: Center(
-                      child: Text('Edit Profile', style: TextStyle(color: Colors.white, fontSize: 13.sp, fontWeight: FontWeight.w800),),
-                    ),
+                    child: Center(child: Text('Post\'s', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 16.sp),))
+                ),
+                /*
+                Container(
+                  height: 30.h,
+                  width: 80.w,
+                  decoration: BoxDecoration(
+                      color: primeryColor,
+                      borderRadius: BorderRadius.circular(10.r)
+                  ),
+                  child: Center(
+                    child: Text('Edit Profile', style: TextStyle(color: Colors.white, fontSize: 13.sp, fontWeight: FontWeight.w800),),
                   ),
                 ),
 
-                
-                
-                
-                SizedBox(height: 20.h,),
+
+
+
+                SizedBox(height: 10.h,),
                 Container(
                   height: 120,
                   width: MediaQuery.of(context).size.width.w,
@@ -159,32 +157,27 @@ class _TeacherProfileState extends State<TeacherProfile> {
                               ),
                             ),
                             SizedBox(width: 5.w),
-                            InkWell(
-                              onTap: (){
-                                Navigator.push(context, MaterialPageRoute(builder: (context)=>TeacherPost()));
-                              },
-                              child: Container(
-                                height: 40.h,
-                                width: 200.w,
-                                decoration: BoxDecoration(
-                                    color: Color(0xffFFFFFF),
-                                    borderRadius: BorderRadius.circular(10.r),
-                                    boxShadow: [
-                                      //bottom right shadow is darker shadow
-                                      BoxShadow(
-                                          color: Colors.grey.shade300,
-                                          offset: const Offset(4, 4),
-                                          blurRadius: 8,
-                                          spreadRadius: 1
-                                      ),
+                            Container(
+                              height: 40.h,
+                              width: 200.w,
+                              decoration: BoxDecoration(
+                                  color: Color(0xffFFFFFF),
+                                  borderRadius: BorderRadius.circular(10.r),
+                                  boxShadow: [
+                                    //bottom right shadow is darker shadow
+                                    BoxShadow(
+                                        color: Colors.grey.shade300,
+                                        offset: const Offset(4, 4),
+                                        blurRadius: 8,
+                                        spreadRadius: 1
+                                    ),
 
-                                      //top left shaow lighter
+                                    //top left shaow lighter
 
-                                    ]
-                                ),
-                                child: Center(
-                                  child: Text('What\'s on your mind?', style: TextStyle(color: Color(0xff494A4B), fontSize: 12.sp),),
-                                ),
+                                  ]
+                              ),
+                              child: Center(
+                                child: Text('What\'s on your mind?', style: TextStyle(color: Color(0xff494A4B), fontSize: 12.sp),),
                               ),
                             )
 
@@ -195,7 +188,7 @@ class _TeacherProfileState extends State<TeacherProfile> {
                   ),
                 ),
 
-                
+                */
                 SizedBox(height: 10.h),
                 Container (
                   padding: EdgeInsets.only(top: 10.r),
@@ -224,7 +217,7 @@ class _TeacherProfileState extends State<TeacherProfile> {
                                     children: [
                                       InkWell(
                                         onTap: (){
-                                          Navigator.push(context, MaterialPageRoute(builder: (context)=> TeacherProfile()));
+                                          Navigator.push(context, MaterialPageRoute(builder: (context)=> TeacherInfoProfile()));
                                         },
                                         child: Container(
                                           decoration: BoxDecoration(
@@ -427,7 +420,7 @@ class _TeacherProfileState extends State<TeacherProfile> {
                                     children: [
                                       InkWell(
                                         onTap: (){
-                                          Navigator.push(context, MaterialPageRoute(builder: (context)=> TeacherProfile()));
+                                          Navigator.push(context, MaterialPageRoute(builder: (context)=> TeacherInfoProfile()));
                                         },
                                         child: Container(
                                           decoration: BoxDecoration(
@@ -630,7 +623,7 @@ class _TeacherProfileState extends State<TeacherProfile> {
                                     children: [
                                       InkWell(
                                         onTap: (){
-                                          Navigator.push(context, MaterialPageRoute(builder: (context)=> TeacherProfile()));
+                                          Navigator.push(context, MaterialPageRoute(builder: (context)=> TeacherInfoProfile()));
                                         },
                                         child: Container(
                                           decoration: BoxDecoration(
@@ -833,7 +826,7 @@ class _TeacherProfileState extends State<TeacherProfile> {
                                     children: [
                                       InkWell(
                                         onTap: (){
-                                          Navigator.push(context, MaterialPageRoute(builder: (context)=> TeacherProfile()));
+                                          Navigator.push(context, MaterialPageRoute(builder: (context)=> TeacherInfoProfile()));
                                         },
                                         child: Container(
                                           decoration: BoxDecoration(

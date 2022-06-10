@@ -1,15 +1,14 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class SuggestionPageS5 extends StatefulWidget {
-  const SuggestionPageS5({Key? key}) : super(key: key);
+class SuggestionT4 extends StatefulWidget {
+  const SuggestionT4({Key? key}) : super(key: key);
 
   @override
-  State<SuggestionPageS5> createState() => _SuggestionPageS5State();
+  State<SuggestionT4> createState() => _SuggestionT4State();
 }
 
-class _SuggestionPageS5State extends State<SuggestionPageS5> {
+class _SuggestionT4State extends State<SuggestionT4> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,9 +29,9 @@ class _SuggestionPageS5State extends State<SuggestionPageS5> {
                         child:Row(
                           children: [
                             InkWell(
-                              onTap: (){
-                                Navigator.pop(context);
-                              },
+                                onTap: (){
+                                  Navigator.pop(context);
+                                },
                                 child: Icon(Icons.arrow_back, size: 20.r,)
                             ),
                             SizedBox(width: 5.w,),
@@ -44,8 +43,8 @@ class _SuggestionPageS5State extends State<SuggestionPageS5> {
                         height: 35.h,
                         width: 70.w,
                         decoration: BoxDecoration(
-                          color: Color(0xff00BFA6),
-                          borderRadius: BorderRadius.circular(10)
+                            color: Color(0xff00BFA6),
+                            borderRadius: BorderRadius.circular(10)
                         ),
                         child: Center(
                           child: Text('Post', style: TextStyle(color: Colors.white, fontSize: 14.sp),),
