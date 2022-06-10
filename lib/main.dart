@@ -4,6 +4,12 @@ import 'package:mupi_project/Information/student_info.dart';
 import 'package:mupi_project/Information/teacher_info.dart';
 import 'package:mupi_project/Login%20Page/login_page1.dart';
 import 'package:mupi_project/Login%20Page/login_page2.dart';
+import 'package:mupi_project/MUPI%20Info/mupi_info_1.dart';
+import 'package:mupi_project/MUPI%20Info/mupi_info_2.dart';
+import 'package:mupi_project/MUPI%20Info/mupi_info_3.dart';
+import 'package:mupi_project/MUPI%20Info/mupi_info_4.dart';
+import 'package:mupi_project/MUPI%20Info/mupi_info_5.dart';
+import 'package:mupi_project/MUPI%20Info/mupi_info_6.dart';
 import 'package:mupi_project/Notice/noticePage.dart';
 import 'package:mupi_project/Notice/notice_page2.dart';
 import 'package:mupi_project/Profile/studentInfo_profile.dart';
@@ -38,16 +44,16 @@ class MyApp extends StatelessWidget {
           ),
           debugShowCheckedModeBanner: false,
           home:
-            Splash_s1()
+            //Splash_s1()
         //SuggestionPageS5()
-
+        //MUPIInfo1()
         //NoticePage()
        // NoticePage2()
           //StudentProfile()
         //StudentInfo()
         //TeacherInfo()
           //TeacherProfile()
-         //HomePage()
+         HomePage()
         //TestFile()
         //StudentInfo()
 

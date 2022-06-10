@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mupi_project/Information/student_info.dart';
 import 'package:mupi_project/Information/teacher_info.dart';
+import 'package:mupi_project/MUPI%20Info/mupi_info_1.dart';
 import 'package:mupi_project/Notice/noticePage.dart';
-import 'package:mupi_project/Profile/studentInfo_profile.dart';
 import 'package:mupi_project/Profile/Student%20Main%20Profile/student_profile.dart';
 import 'package:mupi_project/Profile/Teacher%20Main%20Profile/teacher_profile.dart';
 import 'package:mupi_project/Suggesion/suggestion_page.dart';
@@ -139,7 +139,7 @@ class _HomePageState extends State<HomePage> {
 
                     SizedBox(height: 15.h),
 
-                    Text('Post by',),
+                    Text('Post by',style: TextStyle(fontSize: 16.sp),),
 
 
                   ],
@@ -919,10 +919,10 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Suggestions Question', style: TextStyle(fontFamily: 'Nun'),),
+                    Text('Suggestions & Class Routine', style: TextStyle(fontFamily: 'Nun', fontSize: 16.sp),),
 
                     SizedBox(height: 10.h,),
-                    
+                    /*
                     InkWell(
                       onTap: (){
                         Navigator.push(context, MaterialPageRoute(builder: (context)=>SuggestinoPage1()));
@@ -933,8 +933,10 @@ class _HomePageState extends State<HomePage> {
                         text2: 'Very short, short, easy',
 
                       ),
-                    ),
-/*
+                    ),*/
+
+
+
                     SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       physics: BouncingScrollPhysics(),
@@ -949,18 +951,25 @@ class _HomePageState extends State<HomePage> {
                                 text2: 'Very short, short, easy',
 
                             ),
+                            SizedBox(width: 10.w,),
+                            SuggestionCard(
+                              image: 'images/icon4.png',
+                              text1: 'Class Routine',
+                              text2: 'See your Class routine',
+
+                            ),
 
 
                           ],
                         ),
                       ),
                     ),
-*/
+
 
                   
                     SizedBox(height: 10.h,),
 
-                    Text('More Information', style: TextStyle(fontFamily: 'Nun'),),
+                    Text('More Information', style: TextStyle(fontFamily: 'Nun', fontSize: 15.sp),),
 
                     SizedBox(height: 10.h,),
 
@@ -975,10 +984,15 @@ class _HomePageState extends State<HomePage> {
                           child: Column(
                             children: [
 
-                              InfoCard(
-                                image: 'images/icon7.png',
-                                text1: 'Munshiganj Polytechnic Institute',
-                                text2: 'Munshiganj Polytechnic Institute \nhas been discussed in detail here',
+                              InkWell(
+                                onTap: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context)=>MUPIInfo1()));
+                                },
+                                child: InfoCard(
+                                  image: 'images/icon7.png',
+                                  text1: 'Munshiganj Polytechnic Institute',
+                                  text2: 'Munshiganj Polytechnic Institute \nhas been discussed in detail here',
+                                ),
                               ),
                               SizedBox(height: 10.h,),
                               InkWell(
@@ -1056,7 +1070,7 @@ class _HomePageState extends State<HomePage> {
     return Container(
       padding: EdgeInsets.only(left: 20.r, top: 5.r, bottom: 5.r, right: 10.r),
       height: 90.h,
-      width: MediaQuery.of(context).size.width.w,
+      width: 250.w,
       decoration: BoxDecoration(
           color: Color(0xffFBFBFB),
           borderRadius: BorderRadius.circular(15.r),
